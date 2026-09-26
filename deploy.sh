@@ -8,7 +8,7 @@
 # Then:  ./deploy.sh
 set -euo pipefail
 
-REPO_SLUG="${REPO_SLUG:-backend-monograph}"
+REPO_SLUG="${REPO_SLUG:-Desmond-Papa-Arhinful}"
 GITHUB_USER="${GITHUB_USER:-Des331150}"
 REPO_FULL="$GITHUB_USER/$REPO_SLUG"
 
@@ -38,7 +38,7 @@ fi
 
 step "Ensure remote"
 git remote get-url origin >/dev/null 2>&1 \
-  || git remote add origin "https://github.com/$REPO_FULL.git"
+  || git remote add origin "git@github.com:$REPO_FULL.git"   # gh is configured for SSH
 
 step "Push to main"
 git push -u origin main
