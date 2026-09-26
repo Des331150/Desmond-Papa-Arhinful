@@ -1,0 +1,11 @@
+node_modules/
+.DS_Store
+*.log
+server.log
+server.pid
+__v*.html
+__rt*.html
+__final.html
+.vercel
+.env
+.env.*

@@ -1,0 +1,668 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script>document.documentElement.classList.add('js')</script>
+  <title>Desmond Papa-Arhinful — Backend Engineer (Python · FastAPI · Django)</title>
+  <link rel="stylesheet" href="shared/base.css">
+  <link rel="stylesheet" href="shared/switcher-badge.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="monograph-wrapper">
+    <!-- Top Telemetry & Availability Strip -->
+    <aside class="availability-strip">
+      <div class="availability-left">
+        <span class="status-pulse-dot"></span>
+        <span class="availability-status">Taking on backend contract work</span>
+        <span class="availability-window">— Available now</span>
+      </div>
+      <div class="availability-right">
+        <span class="tz-pill">Accra, Ghana · GMT (UTC+0)</span>
+        <span class="sla-pill">Response time: &lt; 24h</span>
+      </div>
+    </aside>
+
+    <!-- Top Monograph Header / Masthead -->
+    <header class="monograph-masthead">
+      <div class="masthead-top">
+        <div class="folio-edition">Backend Engineering — Python, Go &amp; TypeScript</div>
+        <div class="folio-direct-contact">
+          <span class="direct-email-label">Direct:</span>
+          <button class="btn-quick-copy" id="btnQuickCopyEmail" title="Click to copy email address">
+            <code>arhinfuldesmondpapa02@gmail.com</code>
+            <span class="copy-icon" aria-hidden="true"><svg viewBox="0 0 16 16" width="11" height="11" fill="none" stroke="currentColor" stroke-width="1.4"><rect x="5.5" y="5.5" width="8" height="8" rx="1.5"/><path d="M10.5 3.5v-1a1 1 0 0 0-1-1h-7a1 1 0 0 0-1 1v7a1 1 0 0 0 1 1h1"/></svg></span>
+          </button>
+        </div>
+      </div>
+
+      <div class="masthead-main">
+        <div class="author-block">
+          <h1 class="author-name">Desmond Papa-Arhinful</h1>
+          <p class="author-title">Backend Engineer — Python, FastAPI, Django</p>
+        </div>
+        <nav class="monograph-nav" aria-label="Main Navigation">
+          <a href="#services" class="nav-item">Services &amp; Scopes</a>
+          <a href="#selected-works" class="nav-item">Selected Projects</a>
+          <a href="#index-of-practice" class="nav-item">Index of Practice</a>
+          <a href="#contact" class="nav-cta">Initiate Commission ↗</a>
+        </nav>
+      </div>
+
+      <!-- Mobile navigation. <details> keeps this working with JavaScript disabled. -->
+      <details class="monograph-nav-mobile">
+        <summary class="nav-summary">
+          <span class="nav-summary-label">Contents</span>
+          <span class="nav-summary-mark" aria-hidden="true"></span>
+        </summary>
+        <nav class="mobile-nav-list" aria-label="Main Navigation (mobile)">
+          <a href="#services" class="nav-item">Services &amp; Scopes</a>
+          <a href="#selected-works" class="nav-item">Selected Projects</a>
+          <a href="#index-of-practice" class="nav-item">Index of Practice</a>
+          <a href="#contact" class="nav-cta">Initiate Commission ↗</a>
+        </nav>
+      </details>
+    </header>
+
+    <!-- Editorial Intro & Mission -->
+    <main>
+    <section class="monograph-curation">
+      <div class="curation-statement">
+        <h2 class="statement-headline">
+          Backend APIs, AI-backed features, and document pipelines — built in Python and TypeScript, and shipped.
+        </h2>
+        <p class="statement-text">
+          I build backend systems for founders and small product teams: Python and FastAPI services, Django REST APIs, and the unglamorous work of wiring a language model into a product so it fails predictably instead of hallucinating into production. I read Geological Engineering and Mathematics at KNUST, which is an odd preparation for this and probably why I care about failure modes.
+        </p>
+      </div>
+
+      <!-- Quick Contact Access Bar (Inspiration: Paco Coursey, Rauno, Emil) -->
+      <div class="quick-access-deck">
+        <div class="access-tile">
+          <span class="tile-label">Direct Email</span>
+          <a href="mailto:arhinfuldesmondpapa02@gmail.com" class="tile-link">arhinfuldesmondpapa02@gmail.com</a>
+          <span class="tile-hint">Best for scope, briefs and NDAs</span>
+        </div>
+        <div class="access-tile">
+          <span class="tile-label">Intro Call</span>
+          <a href="#contact" class="tile-link" id="btnScrollBooking">Schedule 20m Intro Call →</a>
+          <span class="tile-hint">A short call to check fit, scope and timing</span>
+        </div>
+        <div class="access-tile">
+          <span class="tile-label">Code &amp; Live Work</span>
+          <div class="external-links-row">
+            <a href="https://github.com/Des331150" target="_blank" rel="noopener" class="ext-link">GitHub ↗</a>
+            <a href="https://lectiq-lac.vercel.app/" target="_blank" rel="noopener" class="ext-link">Lectiq ↗</a>
+            <a href="https://github.com/Des331150?tab=repositories" target="_blank" rel="noopener" class="ext-link">All Builds ↗</a>
+          </div>
+          <span class="tile-hint">Open-source builds and a deployed product</span>
+        </div>
+      </div>
+
+      <div class="standin-curation-notice">
+        <strong>On the work below:</strong> These are my own projects, built outside of client engagements — one deployed and in use, two open-source builds. Where a project has a known limitation rather than a polished answer, I have written the limitation down instead of hiding it.
+      </div>
+    </section>
+
+    <!-- Freelance Services & Engagement Models (Inspiration: Emil Kowalski & Sam Goddard) -->
+    <section id="services" class="services-section">
+      <div class="section-title-bar">
+        <h2 class="section-title">Services &amp; Engagement Models</h2>
+        <span class="section-meta">How We Collaborate</span>
+      </div>
+
+      <div class="services-grid">
+        <div class="service-card">
+          <div class="service-number">01</div>
+          <h3 class="service-name">API Development with FastAPI</h3>
+          <p class="service-desc">
+            Typed, async Python services with request validation, authentication, error handling, and generated OpenAPI documentation your frontend team can actually consume.
+          </p>
+          <ul class="service-deliverables">
+            <li>Async endpoints with Pydantic validation</li>
+            <li>Token or JWT auth, rate limiting, pagination</li>
+            <li>OpenAPI docs, tests, and a deploy path</li>
+          </ul>
+          <div class="service-meta">
+            <span class="service-format">Format: Fixed-scope build (2–6 weeks)</span>
+            <a href="#contact" class="service-action" data-service-type="API Development with FastAPI">Scope Project →</a>
+          </div>
+        </div>
+        <div class="service-card">
+          <div class="service-number">02</div>
+          <h3 class="service-name">Django &amp; DRF Backends</h3>
+          <p class="service-desc">
+            Relational domains modelled properly in Django and exposed as a clean REST API — filtering, pagination, and the unglamorous file-handling work that breaks if nobody tests it.
+          </p>
+          <ul class="service-deliverables">
+            <li>Django models, migrations, admin</li>
+            <li>Serializers, filtersets, pagination</li>
+            <li>Pillow-backed upload processing</li>
+          </ul>
+          <div class="service-meta">
+            <span class="service-format">Format: Fixed-scope build (2–6 weeks)</span>
+            <a href="#contact" class="service-action" data-service-type="Django &amp; DRF Backends">Scope Project →</a>
+          </div>
+        </div>
+        <div class="service-card">
+          <div class="service-number">03</div>
+          <h3 class="service-name">AI-Backed Product Features</h3>
+          <p class="service-desc">
+            Putting a language model behind a real user-facing feature: structured JSON contracts, grading or extraction against source material, and the retry, quota and budget logic that keeps it affordable.
+          </p>
+          <ul class="service-deliverables">
+            <li>Prompt and structured-output contracts</li>
+            <li>Grading and extraction against source text</li>
+            <li>Backoff, retries, quotas, token budgets</li>
+          </ul>
+          <div class="service-meta">
+            <span class="service-format">Format: Fixed-scope build (3–6 weeks)</span>
+            <a href="#contact" class="service-action" data-service-type="AI-Backed Product Features">Scope Project →</a>
+          </div>
+        </div>
+        <div class="service-card">
+          <div class="service-number">04</div>
+          <h3 class="service-name">Document &amp; Data Pipelines</h3>
+          <p class="service-desc">
+            Extracting and transforming documents — PDF and PowerPoint in, structured text and summaries out, with declared limits instead of silent truncation.
+          </p>
+          <ul class="service-deliverables">
+            <li>PDF / PPTX text extraction</li>
+            <li>Map-reduce summarisation over long input</li>
+            <li>Scoped modes, temp-file lifecycle, bulk export</li>
+          </ul>
+          <div class="service-meta">
+            <span class="service-format">Format: Fixed-scope deliverable (1–3 weeks)</span>
+            <a href="#contact" class="service-action" data-service-type="Document &amp; Data Pipelines">Scope Project →</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Selected Projects -->
+    <section id="selected-works" class="works-collection" aria-label="Selected projects">
+      <div class="section-title-bar">
+        <h2 class="section-title">Selected Projects</h2>
+        <span class="section-meta">3 Builds — One Deployed</span>
+      </div>
+
+      <article class="work-spread" id="spread-01">
+        <div class="spread-aside">
+          <div class="aside-eyebrow">Project 01</div>
+          <span class="spread-tag">Live on Vercel</span>
+          <div class="aside-meta-list">
+            <div class="aside-meta-item">
+              <span class="m-label">Domain</span>
+              <span class="m-val">AI Study Tool</span>
+            </div>
+            <div class="aside-meta-item">
+              <span class="m-label">Engagement</span>
+              <span class="m-val">Solo Build</span>
+            </div>
+            <div class="aside-meta-item">
+              <span class="m-label">Deliverable</span>
+              <span class="m-val">Next.js Application</span>
+            </div>
+          </div>
+
+          <div class="spread-skills-group">
+            <span class="skill-pill">TypeScript</span>
+            <span class="skill-pill">Next.js 16</span>
+            <span class="skill-pill">React 19</span>
+            <span class="skill-pill">Supabase</span>
+            <span class="skill-pill">LLM Orchestration</span>
+          </div>
+
+          <div class="spread-actions">
+            <a href="https://lectiq-lac.vercel.app/" class="spread-cta" target="_blank" rel="noopener">Open Live Site ↗</a>
+            <a href="https://github.com/Des331150/lectiq" class="spread-cta" target="_blank" rel="noopener">Source on GitHub ↗</a>
+            <a href="#contact" class="spread-cta" data-inquire="an AI-backed study or assessment tool">Discuss Similar Work →</a>
+          </div>
+        </div>
+
+        <div class="spread-body">
+          <h3 class="spread-title">Lectiq: Lecture Material Into Graded Practice</h3>
+          <p class="spread-lead">
+            Students upload a lecture deck or PDF and get practice quizzes generated from their own material — with every question, and every mark, traceable back to the source text.
+          </p>
+
+          <div class="spread-prose">
+            <h4>The Problem &amp; Constraints</h4>
+            <p>
+              Re-reading notes feels productive and measures almost nothing. The tools that do exist — Quizlet, Anki — test recognition, which you can pass by recognising an answer you have seen. Free-response questions actually test understanding, but grading them normally means a fixed answer key, and a fixed answer key cannot know what a student's particular lecture slide actually said.
+            </p>
+            <p>
+              So the constraint is narrow and strict: any question asked, and any grade given, has to be justifiable against the uploaded document. Nothing from the model's own knowledge of the subject is allowed to leak in.
+            </p>
+
+            <h4>How It Is Built</h4>
+            <p>
+              Everything runs inside Next.js API routes — there is no separate Python service and no inference server to operate. Document extraction happens client-side: <code>pdfjs-dist</code> for PDFs, and <code>JSZip</code> for PowerPoint, which is simply a zip archive of slide XML. That means the file is parsed in the browser and only the extracted text is ever sent onward.
+            </p>
+            <p>
+              Topic extraction is a map-reduce over the document, chunked at 10,000 characters, capped at 30 chunks and 60 topics, with a 90-second wall-clock budget. The prompt is explicit that each topic must carry the <em>verbatim</em> original wording of the slides it covers, because that preserved text is precisely what grading is later measured against. The reduce pass merges near-duplicate topics and drops front matter — agendas, learning objectives, grading policies, thank-you slides — which is the single most effective way to stop a quiz generator from producing a quiz about the syllabus.
+            </p>
+            <p>
+              Grading splits by question type. Multiple choice is deterministic: the answer either matches what the source says or it does not. Free response is judged by the model against the source, returning a score and short feedback, with context capped at 30,000 characters and the cut marked explicitly in the prompt rather than left silent.
+            </p>
+
+            <h4>Reliability &amp; Cost Control</h4>
+            <p>
+              Model calls go through OpenRouter with the model selected by environment variable, so the provider is swappable without a code change. Every call runs at temperature 0 for the deterministic paths, retries three times with exponential backoff on 429 and 5xx, and requests <code>response_format: json_object</code> so parsing does not depend on the model remembering to emit valid JSON. Fenced code blocks are stripped before parsing as a second line of defence.
+            </p>
+            <p>
+              Truncation is a first-class concept rather than an accident. A dedicated limits module carries explicit reason codes — <code>pdf_pages_capped</code>, <code>topics_truncated</code>, <code>deadline_hit</code> — so a short quiz is explainable rather than mysterious. Quota is enforced server-side at ten generated quizzes per user per month, tracked in Postgres by user and month.
+            </p>
+
+            <h4>What Actually Ships</h4>
+            <div class="telemetry-chip-row">
+              <div class="telemetry-chip">
+                <span class="chip-val">Live</span>
+                <span class="chip-lbl">Deployed, end to end</span>
+              </div>
+              <div class="telemetry-chip">
+                <span class="chip-val">PDF + PPTX</span>
+                <span class="chip-lbl">Parsed in-browser</span>
+              </div>
+              <div class="telemetry-chip">
+                <span class="chip-val">10 / month</span>
+                <span class="chip-lbl">Per-user quota</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <article class="work-spread" id="spread-02">
+        <div class="spread-aside">
+          <div class="aside-eyebrow">Project 02</div>
+          <span class="spread-tag">Open Source</span>
+          <div class="aside-meta-list">
+            <div class="aside-meta-item">
+              <span class="m-label">Domain</span>
+              <span class="m-val">Document Intelligence</span>
+            </div>
+            <div class="aside-meta-item">
+              <span class="m-label">Engagement</span>
+              <span class="m-val">Solo Build</span>
+            </div>
+            <div class="aside-meta-item">
+              <span class="m-label">Deliverable</span>
+              <span class="m-val">FastAPI Service</span>
+            </div>
+          </div>
+
+          <div class="spread-skills-group">
+            <span class="skill-pill">Python</span>
+            <span class="skill-pill">FastAPI</span>
+            <span class="skill-pill">PyMuPDF</span>
+            <span class="skill-pill">Transformers</span>
+            <span class="skill-pill">PyTorch</span>
+          </div>
+
+          <div class="spread-actions">
+            <a href="https://github.com/Des331150/text-summariser" class="spread-cta" target="_blank" rel="noopener">Source on GitHub ↗</a>
+            <a href="#contact" class="spread-cta" data-inquire="a document summarisation or extraction service">Discuss Similar Work →</a>
+          </div>
+        </div>
+
+        <div class="spread-body">
+          <h3 class="spread-title">Text Summariser: Scoped PDF Extraction</h3>
+          <p class="spread-lead">
+            Upload a PDF, choose how much of it to read, get a summary back as a downloadable file — and have the working directory tidied up afterwards.
+          </p>
+
+          <div class="spread-prose">
+            <h4>The Problem &amp; Constraints</h4>
+            <p>
+              Summarising a document is easy; summarising <em>the right part</em> of it is the actual work. A 400-page thesis and the four pages that answer one question need completely different treatment, and a service that only offers "summarise the whole file" is asking the user to do the selection work themselves.
+            </p>
+
+            <h4>How It Is Built</h4>
+            <p>
+              A FastAPI service with three explicit extraction modes: the full document, a comma-separated list of pages, or a single chapter identified by name or number. Extraction uses PyMuPDF, which handles the text layer directly rather than OCR.
+            </p>
+            <p>
+              Summarisation runs locally through a Hugging Face <code>transformers</code> pipeline on <code>facebook/bart-large-cnn</code>, with torch for inference. Nothing about the document leaves the machine. The response carries a download link, and the temporary source and summary files are removed once the download is served.
+            </p>
+
+            <h4>Known Limitation</h4>
+            <p>
+              Summarisation input is currently truncated to the first 1,000 characters, which suits a section or a chapter but means a full-document request effectively summarises only its opening. BART's context window is the binding constraint here; the honest fix is chunked map-reduce summarisation with a reduce pass, the same shape Lectiq uses for topic extraction, rather than raising the truncation limit.
+            </p>
+
+            <h4>What Actually Ships</h4>
+            <div class="telemetry-chip-row">
+              <div class="telemetry-chip">
+                <span class="chip-val">3</span>
+                <span class="chip-lbl">Extraction scopes</span>
+              </div>
+              <div class="telemetry-chip">
+                <span class="chip-val">bart-large-cnn</span>
+                <span class="chip-lbl">Local inference</span>
+              </div>
+              <div class="telemetry-chip">
+                <span class="chip-val">Auto</span>
+                <span class="chip-lbl">Temp files removed</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <article class="work-spread" id="spread-03">
+        <div class="spread-aside">
+          <div class="aside-eyebrow">Project 03</div>
+          <span class="spread-tag">Open Source</span>
+          <div class="aside-meta-list">
+            <div class="aside-meta-item">
+              <span class="m-label">Domain</span>
+              <span class="m-val">Recipe Platform API</span>
+            </div>
+            <div class="aside-meta-item">
+              <span class="m-label">Engagement</span>
+              <span class="m-val">Solo Build</span>
+            </div>
+            <div class="aside-meta-item">
+              <span class="m-label">Deliverable</span>
+              <span class="m-val">Django REST API</span>
+            </div>
+          </div>
+
+          <div class="spread-skills-group">
+            <span class="skill-pill">Python</span>
+            <span class="skill-pill">Django</span>
+            <span class="skill-pill">DRF</span>
+            <span class="skill-pill">Pillow</span>
+            <span class="skill-pill">SQLite</span>
+          </div>
+
+          <div class="spread-actions">
+            <a href="https://github.com/Des331150/gohanbako" class="spread-cta" target="_blank" rel="noopener">Source on GitHub ↗</a>
+            <a href="#contact" class="spread-cta" data-inquire="a Django or DRF API with file uploads">Discuss Similar Work →</a>
+          </div>
+        </div>
+
+        <div class="spread-body">
+          <h3 class="spread-title">Gohanbako: A Recipe-Sharing API</h3>
+          <p class="spread-lead">
+            An account-based API for publishing recipes, where every uploaded image is validated, normalised and re-encoded on the server before it is ever stored.
+          </p>
+
+          <div class="spread-prose">
+            <h4>The Problem &amp; Constraints</h4>
+            <p>
+              An image field on a user-facing model is an unbounded input problem. Users upload whatever is on their phone: PNGs with alpha channels, palette images, files that are not images at all, images large enough to make every subsequent list request slow. Deciding where that responsibility sits is the whole design question.
+            </p>
+
+            <h4>How It Is Built</h4>
+            <p>
+              The decision here was to handle it in the model's <code>save()</code> rather than in a view or a serializer, so the guarantee holds on every write path including the Django admin and the shell. The uploaded file is opened and verified with Pillow, which rejects anything that is not a decodable image. Alpha and palette modes are flattened to RGB, the image is resized to 800 pixels wide with aspect ratio preserved using LANCZOS, and re-encoded as an optimised JPEG at quality 70 before being written back under a normalised <code>.jpg</code> filename.
+            </p>
+            <p>
+              On the API side, recipes carry a many-to-many label relation, listing is paginated at ten per page, and filtering is handled by a dedicated filter class. Authentication is Django REST Framework token auth via <code>obtain_auth_token</code>, and registration is a separate open endpoint.
+            </p>
+
+            <h4>What Actually Ships</h4>
+            <div class="telemetry-chip-row">
+              <div class="telemetry-chip">
+                <span class="chip-val">800px</span>
+                <span class="chip-lbl">Normalised width</span>
+              </div>
+              <div class="telemetry-chip">
+                <span class="chip-val">10 / page</span>
+                <span class="chip-lbl">Paginated listing</span>
+              </div>
+              <div class="telemetry-chip">
+                <span class="chip-val">Token</span>
+                <span class="chip-lbl">DRF auth</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </article>
+    </section>
+
+    <!-- Index of Practice (Technical Capabilities tied to the work) -->
+    <section id="index-of-practice" class="practice-index-section">
+      <div class="section-title-bar">
+        <h2 class="section-title">Index of Practice</h2>
+        <span class="section-meta">Stack, tied to the work above</span>
+      </div>
+
+      <div class="practice-grid">
+        <div class="practice-col">
+          <h3 class="domain-title">Backend &amp; APIs</h3>
+          <ul class="practice-list">
+            <li>
+              <strong>Python</strong> — The language most of this work is written in
+              <span class="ref-group"><a class="ref-link" href="#spread-01">Ref: Lectiq tooling</a><a class="ref-link" href="#spread-02">Ref: Summariser</a><a class="ref-link" href="#spread-03">Ref: Gohanbako</a></span>
+            </li>
+            <li>
+              <strong>FastAPI</strong> — Async services, validation, OpenAPI
+              <a class="ref-link" href="#spread-02">Ref: Summariser</a>
+            </li>
+            <li>
+              <strong>Django &amp; DRF</strong> — Models, migrations, serializers, auth
+              <a class="ref-link" href="#spread-03">Ref: Gohanbako</a>
+            </li>
+            <li>
+              <strong>REST Design</strong> — Pagination, filtering, token auth
+              <a class="ref-link" href="#spread-03">Ref: Gohanbako</a>
+            </li>
+            <li>
+              <strong>PostgreSQL</strong> — Schema design, migrations, query modelling
+              <a class="ref-link" href="#spread-01">Ref: Lectiq</a>
+            </li>
+          </ul>
+        </div>
+        <div class="practice-col">
+          <h3 class="domain-title">AI &amp; Data Pipelines</h3>
+          <ul class="practice-list">
+            <li>
+              <strong>LLM Orchestration</strong> — Structured output, retries, budgets
+              <a class="ref-link" href="#spread-01">Ref: Lectiq</a>
+            </li>
+            <li>
+              <strong>Prompt Contracts</strong> — JSON schemas the model has to satisfy
+              <a class="ref-link" href="#spread-01">Ref: Lectiq</a>
+            </li>
+            <li>
+              <strong>Grading &amp; Extraction</strong> — Judging output against source text
+              <a class="ref-link" href="#spread-01">Ref: Lectiq</a>
+            </li>
+            <li>
+              <strong>Hugging Face Transformers</strong> — Local summarisation pipelines
+              <a class="ref-link" href="#spread-02">Ref: Summariser</a>
+            </li>
+            <li>
+              <strong>Document Parsing</strong> — PDF via PyMuPDF, PPTX via JSZip
+              <span class="ref-group"><a class="ref-link" href="#spread-01">Ref: Lectiq</a><a class="ref-link" href="#spread-02">Ref: Summariser</a></span>
+            </li>
+          </ul>
+        </div>
+        <div class="practice-col">
+          <h3 class="domain-title">Frontend &amp; Platform</h3>
+          <ul class="practice-list">
+            <li>
+              <strong>TypeScript</strong> — End to end, not just the API layer
+              <a class="ref-link" href="#spread-01">Ref: Lectiq</a>
+            </li>
+            <li>
+              <strong>Next.js App Router</strong> — Server components and route handlers
+              <a class="ref-link" href="#spread-01">Ref: Lectiq</a>
+            </li>
+            <li>
+              <strong>React 19 &amp; Tailwind</strong> — Interface work, not just plumbing
+              <a class="ref-link" href="#spread-01">Ref: Lectiq</a>
+            </li>
+            <li>
+              <strong>Supabase</strong> — Auth, sessions and Postgres
+              <a class="ref-link" href="#spread-01">Ref: Lectiq</a>
+            </li>
+            <li>
+              <strong>Vercel</strong> — Deployment and edge runtime
+              <a class="ref-link" href="#spread-01">Ref: Lectiq</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- Comprehensive Contact & Commission Intake Section -->
+    <section id="contact" class="engagement-section">
+      <div class="engagement-intro">
+        <h2 class="engagement-title">Start a Conversation</h2>
+        <p class="engagement-lead">
+          I take on a small number of backend contracts at a time — API builds, Django or FastAPI work, and AI features that need to be more than a demo. Reach out through whichever channel suits you.
+        </p>
+      </div>
+
+      <!-- Multi-Channel Contact Hub Grid -->
+      <div class="contact-hub-grid">
+        <!-- Direct Channel Card -->
+        <div class="direct-contact-card">
+          <h3 class="channel-card-title">Direct Contact Information</h3>
+          <p class="channel-card-desc">
+            Direct channels for founders, executive sponsors, and engineering directors.
+          </p>
+
+          <div class="contact-methods-list">
+            <div class="contact-item">
+              <div class="ci-header">
+                <span class="ci-label">Primary Studio Email</span>
+                <span class="ci-badge">Fastest</span>
+              </div>
+              <div class="ci-value-row">
+                <code class="ci-address" id="mainEmailText">arhinfuldesmondpapa02@gmail.com</code>
+                <button class="btn-copy-address" id="btnCopyMainEmail" aria-label="Copy email address">Copy <span class="copy-icon" aria-hidden="true"><svg viewBox="0 0 16 16" width="11" height="11" fill="none" stroke="currentColor" stroke-width="1.4"><rect x="5.5" y="5.5" width="8" height="8" rx="1.5"/><path d="M10.5 3.5v-1a1 1 0 0 0-1-1h-7a1 1 0 0 0-1 1v7a1 1 0 0 0 1 1h1"/></svg></span></button>
+              </div>
+              <span class="ci-sub">Typical response within 24 business hours. Encrypted PGP available upon request.</span>
+            </div>
+
+            <div class="contact-item">
+              <div class="ci-header">
+                <span class="ci-label">Intro Call (20 Min)</span>
+              </div>
+              <div class="ci-value-row">
+                <a href="#discovery-call-placeholder" class="calendar-booking-btn" id="btnBookingLink">
+                  <svg class="inline-icon" viewBox="0 0 16 16" width="12" height="12" fill="none" stroke="currentColor" stroke-width="1.3" aria-hidden="true"><rect x="1.5" y="3" width="13" height="12" rx="1.5"/><path d="M1.5 6.5h13M5 1.5v3M11 1.5v3"/></svg>
+                  Open Calendar Availability ↗
+                </a>
+              </div>
+              <span class="ci-sub">A short call to work out whether I am the right fit, and what the scope and timeline look like.</span>
+            </div>
+
+            <div class="contact-item">
+              <div class="ci-header">
+                <span class="ci-label">Code &amp; Direct Contact</span>
+              </div>
+              <div class="channel-links-grid">
+                <a href="https://github.com/Des331150" target="_blank" rel="noopener" class="channel-chip">
+                  <span class="chip-name">GitHub</span>
+                  <span class="chip-handle">@Des331150</span>
+                </a>
+                <a href="https://lectiq-lac.vercel.app/" target="_blank" rel="noopener" class="channel-chip">
+                  <span class="chip-name">Live Project</span>
+                  <span class="chip-handle">lectiq-lac.vercel.app</span>
+                </a>
+                <a href="tel:+233596318921" class="channel-chip">
+                  <span class="chip-name">Phone</span>
+                  <span class="chip-handle">+233 59 631 8921</span>
+                </a>
+                <a href="#direct-chat-placeholder" class="channel-chip" id="btnDirectChat">
+                  <span class="chip-name">Signal / WhatsApp</span>
+                  <span class="chip-handle">Upon request</span>
+                </a>
+              </div>
+            </div>
+
+            <div class="studio-terms-note">
+              <strong>Engagement Parameters:</strong> Sprints typically run 1 to 6 weeks depending on scope. I work under NDA where it is needed, and I will say so early if I think a project is a bad fit or beyond what I can deliver well.
+            </div>
+          </div>
+        </div>
+
+        <!-- Interactive Scoping Brief Generator -->
+        <div class="scoping-generator-card">
+          <div class="generator-header">
+            <h3 class="channel-card-title">Project Scoping Brief Generator</h3>
+            <span class="gen-subtitle">Fill in your requirements to generate a structured email brief</span>
+          </div>
+
+          <form id="scopingBriefForm" class="scoping-form">
+            <div class="form-row-duo">
+              <div class="field-wrap">
+                <label for="clientCompany">Studio / Company Name</label>
+                <input type="text" id="clientCompany" placeholder="e.g. Acme Labs or Studio Vanguard" required>
+              </div>
+              <div class="field-wrap">
+                <label for="clientContactName">Your Name &amp; Title</label>
+                <input type="text" id="clientContactName" placeholder="e.g. Jane Doe, Founder / CTO" required>
+              </div>
+            </div>
+
+            <div class="form-row-duo">
+              <div class="field-wrap">
+                <label for="projectScopeType">Engagement Model</label>
+                <select id="projectScopeType">
+                  <option value="API Development with FastAPI">API Development with FastAPI</option>
+                  <option value="Django &amp; DRF Backends">Django &amp; DRF Backends</option>
+                  <option value="AI-Backed Product Features">AI-Backed Product Features</option>
+                  <option value="Document &amp; Data Pipelines">Document &amp; Data Pipelines</option>
+                </select>
+              </div>
+              <div class="field-wrap">
+                <label for="projectTimeline">Target Timeline / Kickoff</label>
+                <select id="projectTimeline">
+                  <option value="Immediate (Next 2-3 Weeks)">Immediate (Next 2–3 Weeks)</option>
+                  <option value="Within Q4 2026">Within Q4 2026</option>
+                  <option value="Early 2027">Early 2027</option>
+                  <option value="Flexible / Scoping Phase">Flexible / Scoping Phase</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="field-wrap full">
+              <label for="projectDetails">Project Objectives, Technical Stack &amp; Constraints</label>
+              <textarea id="projectDetails" rows="4" placeholder="Briefly describe what you're building, the performance or architectural hurdles, and any specific stack requirements..."></textarea>
+            </div>
+
+            <div class="scoping-actions">
+              <button type="submit" class="btn-generate-brief" id="btnGenerateBrief">
+                Copy Formatted Project Brief ↗
+              </button>
+              <a href="mailto:arhinfuldesmondpapa02@gmail.com?subject=Freelance%20Project%20Inquiry" class="btn-email-direct" id="btnEmailDirect">
+                Open Email Client ✉
+              </a>
+            </div>
+
+            <div class="feedback-alert" id="scopingAlert" role="status" aria-live="polite">
+              ✓ Structured project brief copied to clipboard. Ready to paste directly into your email or communication tool.
+            </div>
+          </form>
+        </div>
+      </div>
+    </section>
+    </main>
+
+    <!-- Editorial Colophon -->
+    <footer class="monograph-colophon">
+      <div class="colophon-left">
+        <strong>Desmond Papa-Arhinful — Backend Engineering</strong>
+        <p>Backend engineering with FastAPI, Django and Python. Set in Newsreader Serif and system sans. Printed on digital parchment.</p>
+        <p class="colophon-disclaimer">All four case studies are illustrative placeholders, not records of paid client engagements.</p>
+      </div>
+      <div class="colophon-right">
+        <a href="prototypes/index.html" class="colophon-hub-link">← Master Prototype Hub</a>
+        <button class="btn-print-portfolio" id="btnPrintPortfolio">Print / Export PDF <svg class="inline-icon" viewBox="0 0 16 16" width="12" height="12" fill="none" stroke="currentColor" stroke-width="1.3" aria-hidden="true"><path d="M4.5 6V2.5h7V6M4.5 12H3a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h10a1 1 0 0 1 1 1v4a1 1 0 0 1-1 1h-1.5"/><rect x="4.5" y="9.5" width="7" height="4" rx="0.5"/></svg></button>
+        <a href="#selected-works">Return to Top ↑</a>
+      </div>
+    </footer>
+  </div>
+
+  <script src="app.js"></script>
+  <script src="shared/switcher-badge.js"></script>
+</body>
+</html>

@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script>document.documentElement.classList.add('js')</script>
+  <title>[Alex Mercer] — Spatial Bento Showcase (Prototype 4)</title>
+  <link rel="stylesheet" href="../../shared/base.css">
+  <link rel="stylesheet" href="../../shared/switcher-badge.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="bento-body">
+  <div class="bento-container">
+    <!-- Top Bar -->
+    <header class="bento-header">
+      <div class="bento-brand">
+        <span class="brand-badge">PROTOTYPE 04</span>
+        <div class="brand-text">
+          <span class="brand-name">[Alex Mercer]</span>
+          <span class="brand-role">Product Engineer &amp; Systems Architect (Placeholder)</span>
+        </div>
+      </div>
+      <div class="bento-nav">
+        <a href="#bento-grid" class="bento-nav-link">Grid Overview</a>
+        <a href="#bento-contact" class="bento-cta-role">Role Intake</a>
+        <a href="#bento-contact" class="bento-cta-client">Client Inquiry</a>
+      </div>
+    </header>
+
+    <!-- Main Spatial Bento Matrix -->
+    <main class="bento-matrix" id="bento-grid">
+      <!-- Bento Tile 1: Hero & Positioning -->
+      <section class="bento-tile tile-hero">
+        <h1 class="tile-headline">
+          Engineering low-latency distributed systems &amp; fluid collaborative canvases.
+        </h1>
+        <p class="tile-subtext">
+          Designed for instant scanability. Every card below demonstrates specific architecture trade-offs, frontend graphics craft, and platform stability.
+        </p>
+        <div class="tile-notice">
+          <strong>Notice:</strong> All project entries are stand-in case studies per <code>PRODUCT.md</code> to evaluate UX layout and capability mapping.
+        </div>
+      </section>
+
+      <!-- Bento Tile 2: Dual Action Hub -->
+      <section class="bento-tile tile-dual-hub">
+        <h2 class="tile-title">Dual Audience Pathways</h2>
+        <div class="pathway-split">
+          <div class="hub-pathway">
+            <span class="pathway-tag tag-role">For Hiring Teams</span>
+            <p>Assessing Staff/Lead engineering capability, concurrency patterns, and technical leadership.</p>
+            <a href="#bento-contact" class="hub-link role" data-bento-mode="role">Evaluate Role Fit →</a>
+          </div>
+          <div class="hub-pathway">
+            <span class="pathway-tag tag-client">For Clients</span>
+            <p>Commissioning custom graphics canvases, distributed backends, or design token engines.</p>
+            <a href="#bento-contact" class="hub-link client" data-bento-mode="client">Scope Commission →</a>
+          </div>
+        </div>
+      </section>
+
+      <!-- Bento Tile 3: Stand-in Project 1 (Khepri) -->
+      <article class="bento-tile tile-project" id="bento-khepri">
+        <div class="tile-meta">
+          <span class="project-pill">[Stand-in Project // Infrastructure]</span>
+          <span class="project-year">Rust Core</span>
+        </div>
+        <h3 class="project-title">Khepri: Distributed Event Mesh</h3>
+        <p class="project-desc">
+          Lock-free RingBuffer in Rust with zero-copy socket splicing and WASM plugin filters handling 1.8M+ events/sec with sub-millisecond dispatching.
+        </p>
+        <div class="tile-skills">
+          <span class="pill">Rust</span>
+          <span class="pill">Raft Consensus</span>
+          <span class="pill">Zero-Copy IO</span>
+          <span class="pill">WASM</span>
+        </div>
+        <div class="tile-action-row">
+          <button class="btn-inspect" data-inspect="khepri">Inspect Architecture ↗</button>
+        </div>
+      </article>
+
+      <!-- Bento Tile 4: Stand-in Project 2 (Vesper) -->
+      <article class="bento-tile tile-project" id="bento-vesper">
+        <div class="tile-meta">
+          <span class="project-pill">[Stand-in Project // Graphics]</span>
+          <span class="project-year">WebGL2 &amp; CRDT</span>
+        </div>
+        <h3 class="project-title">Vesper: Spatial Data Canvas</h3>
+        <p class="project-desc">
+          Infinite multi-user canvas rendering 250,000+ interactive nodes with real-time peer cursors, WebGL2 instanced shaders, and SharedArrayBuffer worker culling.
+        </p>
+        <div class="tile-skills">
+          <span class="pill">TypeScript</span>
+          <span class="pill">WebGL2 / GLSL</span>
+          <span class="pill">Spatial Quadtree</span>
+          <span class="pill">CRDT (Yjs)</span>
+        </div>
+        <div class="tile-action-row">
+          <button class="btn-inspect" data-inspect="vesper">Inspect Architecture ↗</button>
+        </div>
+      </article>
+
+      <!-- Bento Tile 5: Stand-in Project 3 (Chronicle) -->
+      <article class="bento-tile tile-project" id="bento-chronicle">
+        <div class="tile-meta">
+          <span class="project-pill">[Stand-in Project // Developer Tooling]</span>
+          <span class="project-year">Go Compiler</span>
+        </div>
+        <h3 class="project-title">Chronicle: Spec-First API Orchestrator</h3>
+        <p class="project-desc">
+          Unified API schema engine compiling OpenAPI, GraphQL, and Protobuf into deterministic client SDKs and breaking-change guards across 40+ engineering teams.
+        </p>
+        <div class="tile-skills">
+          <span class="pill">Go</span>
+          <span class="pill">AST Compilers</span>
+          <span class="pill">OpenAPI / GraphQL</span>
+          <span class="pill">CI Verification</span>
+        </div>
+        <div class="tile-action-row">
+          <button class="btn-inspect" data-inspect="chronicle">Inspect Architecture ↗</button>
+        </div>
+      </article>
+
+      <!-- Bento Tile 6: Stand-in Project 4 (Atelier) -->
+      <article class="bento-tile tile-project" id="bento-atelier">
+        <div class="tile-meta">
+          <span class="project-pill">[Stand-in Project // Design Engineering]</span>
+          <span class="project-year">Design Tokens</span>
+        </div>
+        <h3 class="project-title">Atelier: Autonomous Design Token Engine</h3>
+        <p class="project-desc">
+          Cross-platform token compiler calculating perceptual contrast in OKLCH color space with guaranteed WCAG AAA compliance and zero-runtime CSS custom properties.
+        </p>
+        <div class="tile-skills">
+          <span class="pill">Design Systems</span>
+          <span class="pill">WCAG AAA</span>
+          <span class="pill">OKLCH Math</span>
+          <span class="pill">CSS Architecture</span>
+        </div>
+        <div class="tile-action-row">
+          <button class="btn-inspect" data-inspect="atelier">Inspect Architecture ↗</button>
+        </div>
+      </article>
+
+      <!-- Bento Tile 7: Capability Companion Matrix -->
+      <section class="bento-tile tile-skills-matrix">
+        <h2 class="tile-title">Capability Companion Matrix</h2>
+        <p class="matrix-sub">Directly reflected across the 4 architecture studies</p>
+        <div class="matrix-groups">
+          <div class="m-group">
+            <span class="g-title">Core Systems</span>
+            <span class="g-items">Rust (RingBuffer, Concurrency) · Go (AST Compilers) · WASM Sandboxes · Raft</span>
+          </div>
+          <div class="m-group">
+            <span class="g-title">Frontend &amp; Graphics</span>
+            <span class="g-items">TypeScript · WebGL2 / GLSL · CRDT (Yjs) · Spatial Quadtrees · Web Workers</span>
+          </div>
+          <div class="m-group">
+            <span class="g-title">Design Engineering</span>
+            <span class="g-items">Design Tokens · OKLCH Color Space · WCAG AAA Accessibility · Multi-Platform Export</span>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Bento Contact / Intake Section -->
+    <section class="bento-contact-section" id="bento-contact">
+      <div class="contact-card">
+        <div class="contact-header">
+          <h2 class="contact-headline">Structured Intake Conversation</h2>
+          <p class="contact-sub">Select your path below for instant template formatting.</p>
+        </div>
+
+        <div class="intake-tabs">
+          <button class="i-tab active" id="tabBentoRole">Hiring &amp; Role Fit</button>
+          <button class="i-tab" id="tabBentoClient">Client &amp; Commission</button>
+        </div>
+
+        <!-- Role Form -->
+        <div class="bento-form-wrapper" id="bentoRoleForm">
+          <div class="bento-form-grid">
+            <div class="form-row">
+              <label>Organization / Team</label>
+              <input type="text" id="bentoRoleOrg" placeholder="e.g. Acme Cloud Corp">
+            </div>
+            <div class="form-row">
+              <label>Role Capacity</label>
+              <select id="bentoRoleType">
+                <option>Staff / Principal Systems Engineer</option>
+                <option>Lead Frontend &amp; WebGL Engineer</option>
+                <option>Founding Engineer / VP Engineering</option>
+                <option>Fractional Technical Advisory</option>
+              </select>
+            </div>
+          </div>
+          <div class="form-row full">
+            <label>Specific Architectural Focus or Questions</label>
+            <textarea id="bentoRoleContext" rows="3" placeholder="Describe current challenges or specific case study alignments..."></textarea>
+          </div>
+          <div class="bento-form-action">
+            <span class="direct-email">Direct: <code>[role-inquiry-placeholder@domain.com]</code></span>
+            <button class="btn-bento-submit" id="btnSubmitBentoRole">Copy Formatted Role Intake →</button>
+          </div>
+          <div class="copy-alert" id="bentoRoleAlert">✓ Role intake draft copied to clipboard. Ready to paste!</div>
+        </div>
+
+        <!-- Client Form -->
+        <div class="bento-form-wrapper" id="bentoClientForm" style="display: none;">
+          <div class="bento-form-grid">
+            <div class="form-row">
+              <label>Client Organization</label>
+              <input type="text" id="bentoClientOrg" placeholder="e.g. Studio Vertex">
+            </div>
+            <div class="form-row">
+              <label>Engagement Focus</label>
+              <select id="bentoClientType">
+                <option>0-to-1 Web Application &amp; Canvas Build</option>
+                <option>High-Throughput Distributed Microservices</option>
+                <option>Enterprise Design System &amp; Tokens</option>
+                <option>Architecture &amp; Performance Audit</option>
+              </select>
+            </div>
+          </div>
+          <div class="form-row full">
+            <label>Scope Deliverables &amp; Timeline</label>
+            <textarea id="bentoClientContext" rows="3" placeholder="Outline technical goals, target dates, or constraints..."></textarea>
+          </div>
+          <div class="bento-form-action">
+            <span class="direct-email">Direct: <code>[client-inquiry-placeholder@domain.com]</code></span>
+            <button class="btn-bento-submit client" id="btnSubmitBentoClient">Copy Project Scoping Brief →</button>
+          </div>
+          <div class="copy-alert" id="bentoClientAlert">✓ Scoping brief copied to clipboard. Ready to paste!</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Bento Modal Inspector -->
+    <div class="bento-modal" id="bentoInspectorModal" aria-hidden="true">
+      <div class="bento-modal-backdrop" id="bentoModalBackdrop"></div>
+      <div class="bento-modal-content">
+        <div class="bento-modal-header">
+          <span class="bento-modal-tag" id="modalTag">STAND-IN ARCHITECTURE SPEC</span>
+          <button class="bento-modal-close" id="btnBentoModalClose">✕</button>
+        </div>
+        <div class="bento-modal-body">
+          <h3 class="bento-modal-title" id="modalTitle">Project Title</h3>
+          <p class="bento-modal-desc" id="modalDesc">Detailed description...</p>
+          <div class="bento-modal-tradeoffs">
+            <h4>Key Architectural Trade-Offs &amp; Skills</h4>
+            <p id="modalTradeoffs">Trade-off specifics...</p>
+          </div>
+          <div class="bento-modal-metrics">
+            <h4>Telemetry Readings (Stand-in)</h4>
+            <div class="modal-metric-chips" id="modalMetrics"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bento-footer">
+      <div class="footer-copy">
+        [Alex Mercer] — Spatial Bento Portfolio Prototype. Strictly following <code>PRODUCT.md</code>.
+      </div>
+      <div class="footer-links">
+        <a href="../../index.html">Master Prototype Hub ↗</a>
+      </div>
+    </footer>
+  </div>
+
+  <script src="app.js"></script>
+  <script src="../../shared/switcher-badge.js"></script>
+</body>
+</html>

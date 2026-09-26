@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfolio Prototypes Suite — [Alex Mercer] Freelance Studio</title>
+  <link rel="stylesheet" href="../shared/base.css">
+  <link rel="stylesheet" href="hub.css">
+</head>
+<body>
+  <!-- Header Banner -->
+  <header class="hub-header">
+    <div class="hub-header-left">
+      <div class="hub-logo">
+        <span class="hub-logo-mark">⚡</span>
+        <div>
+          <span class="hub-logo-title">Portfolio Prototype Suite</span>
+          <span class="hub-logo-sub">Selected Freelance Direction: <strong>Studio Monograph</strong> per <code>PRODUCT.md</code></span>
+        </div>
+      </div>
+    </div>
+    <div class="hub-header-right">
+      <span class="hub-live-badge">● LIVE LOCAL SERVER</span>
+      <a href="../PRODUCT.md" target="_blank" class="hub-spec-link">View PRODUCT.md ↗</a>
+    </div>
+  </header>
+
+  <!-- Prototype Selection Bar -->
+  <nav class="prototype-selector-bar" aria-label="Prototype Switcher">
+    <div class="selector-inner">
+      <button class="proto-tab-btn active selected-direction" data-proto-id="editorial-monograph" data-proto-url="editorial-monograph/index.html">
+        <span class="tab-num">★ SELECTED</span>
+        <span class="tab-label">Studio Monograph (Freelance)</span>
+        <span class="tab-tag">Tactile Editorial</span>
+      </button>
+
+      <button class="proto-tab-btn" data-proto-id="split-ledger" data-proto-url="split-ledger/index.html">
+        <span class="tab-num">01</span>
+        <span class="tab-label">Dual-Track Ledger</span>
+        <span class="tab-tag">Swiss Precision</span>
+      </button>
+
+      <button class="proto-tab-btn" data-proto-id="linear-systems" data-proto-url="linear-systems/index.html">
+        <span class="tab-num">03</span>
+        <span class="tab-label">Systems Console</span>
+        <span class="tab-tag">Obsidian Terminal</span>
+      </button>
+
+      <button class="proto-tab-btn" data-proto-id="bento-spatial" data-proto-url="bento-spatial/index.html">
+        <span class="tab-num">04</span>
+        <span class="tab-label">Spatial Bento</span>
+        <span class="tab-tag">Modular Canvas</span>
+      </button>
+
+      <button class="proto-tab-btn" data-proto-id="kinetic-minimal" data-proto-url="kinetic-minimal/index.html">
+        <span class="tab-num">05</span>
+        <span class="tab-label">Radical Minimalist</span>
+        <span class="tab-tag">Scandinavian High-Scan</span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Live Viewer Toolbar -->
+  <div class="viewer-controls-bar">
+    <div class="controls-left">
+      <span class="current-proto-indicator" id="currentProtoName">Prototype 2: Studio Monograph (Selected Freelance Direction)</span>
+      <a href="editorial-monograph/index.html" target="_blank" class="btn-launch-full" id="btnLaunchFull">
+        Open Standalone Fullscreen ↗
+      </a>
+    </div>
+
+    <div class="viewport-toggles">
+      <span class="viewport-label">Device Viewport:</span>
+      <button class="vp-btn active" data-width="100%" title="Fluid Responsive (100%)">
+        <svg viewBox="0 0 24 24" width="16" height="16" stroke="currentColor" stroke-width="2" fill="none"><rect x="2" y="3" width="20" height="14" rx="2"></rect><line x1="8" y1="21" x2="16" y2="21"></line><line x1="12" y1="17" x2="12" y2="21"></line></svg>
+        <span>Fluid Full</span>
+      </button>
+      <button class="vp-btn" data-width="1280px" title="Desktop Viewport (1280px)">
+        <svg viewBox="0 0 24 24" width="16" height="16" stroke="currentColor" stroke-width="2" fill="none"><rect x="2" y="3" width="20" height="14" rx="2"></rect><line x1="8" y1="21" x2="16" y2="21"></line></svg>
+        <span>Desktop</span>
+      </button>
+      <button class="vp-btn" data-width="768px" title="Tablet Viewport (768px)">
+        <svg viewBox="0 0 24 24" width="16" height="16" stroke="currentColor" stroke-width="2" fill="none"><rect x="4" y="2" width="16" height="20" rx="2"></rect><line x1="12" y1="18" x2="12.01" y2="18"></line></svg>
+        <span>Tablet</span>
+      </button>
+      <button class="vp-btn" data-width="390px" title="Mobile Viewport (390px)">
+        <svg viewBox="0 0 24 24" width="16" height="16" stroke="currentColor" stroke-width="2" fill="none"><rect x="5" y="2" width="14" height="20" rx="2"></rect><line x1="12" y1="18" x2="12.01" y2="18"></line></svg>
+        <span>Mobile</span>
+      </button>
+    </div>
+  </div>
+
+  <!-- Embedded Live Prototype Preview Stage -->
+  <main class="preview-stage-wrapper">
+    <div class="preview-frame-container" id="frameContainer">
+      <iframe src="editorial-monograph/index.html" class="preview-iframe" id="previewIframe" title="Live Portfolio Prototype Viewport"></iframe>
+    </div>
+  </main>
+
+  <!-- Design Strategy & Comparative Scorecard -->
+  <section class="comparative-analysis-section">
+    <div class="analysis-container">
+      <div class="analysis-header">
+        <h2 class="analysis-title">Prototype Architecture &amp; Rationale Matrix</h2>
+        <p class="analysis-desc">
+          Evaluated against the updated freelance direction in <code>PRODUCT.md</code>: Tailored for prospective clients, founders, and studios; featuring explicit engagement models, multi-channel direct contact access, structured scoping brief generation, and print stylesheets.
+        </p>
+      </div>
+
+      <div class="proto-cards-grid">
+        <!-- Card 2 (Featured Direction) -->
+        <div class="rationale-card selected-featured">
+          <div class="rc-header">
+            <span class="rc-num">★ CHOSEN DIRECTION</span>
+            <span class="rc-badge featured">Freelance Studio Monograph</span>
+          </div>
+          <h3 class="rc-title">The Studio Monograph</h3>
+          <p class="rc-summary">
+            Treats independent engineering practice as literature. Tailored specifically for founders and studios looking to commission high-craft technical software.
+          </p>
+          <ul class="rc-features">
+            <li><strong>Client Engagement Models:</strong> 0-to-1 Builds, Distributed Systems, Design Systems &amp; Advisory Retainers.</li>
+            <li><strong>Direct Multi-Channel Contact:</strong> 1-click email copy, 20m discovery call booking, verified repos, and direct chat links.</li>
+            <li><strong>Interactive Scoping:</strong> Structured project brief generator with automatic clipboard formatting.</li>
+            <li><strong>Production Grade:</strong> Includes `@media print` stylesheet for PDF export.</li>
+          </ul>
+          <div class="rc-actions">
+            <button class="btn-rc-view active" data-launch="editorial-monograph">View in Previewer</button>
+            <a href="editorial-monograph/index.html" target="_blank" class="rc-link">Standalone ↗</a>
+          </div>
+        </div>
+
+        <!-- Card 1 -->
+        <div class="rationale-card">
+          <div class="rc-header">
+            <span class="rc-num">01</span>
+            <span class="rc-badge">Swiss Mechanical</span>
+          </div>
+          <h3 class="rc-title">Dual-Track Ledger</h3>
+          <p class="rc-summary">
+            Parallel audience rails with a sticky synchronized capability ledger. Clicking any skill in the sidebar instantly filters down to the relevant software architectures.
+          </p>
+          <ul class="rc-features">
+            <li><strong>Recruiter Scan:</strong> Instant evaluation of concurrency &amp; full-stack capabilities.</li>
+            <li><strong>Client Scoping:</strong> Direct architecture trade-offs and contract scoping.</li>
+            <li><strong>Interaction:</strong> Synchronized sticky skill matrix and tabbed spec viewer.</li>
+          </ul>
+          <div class="rc-actions">
+            <button class="btn-rc-view" data-launch="split-ledger">Switch Preview</button>
+            <a href="split-ledger/index.html" target="_blank" class="rc-link">Standalone ↗</a>
+          </div>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="rationale-card">
+          <div class="rc-header">
+            <span class="rc-num">03</span>
+            <span class="rc-badge">Obsidian Terminal</span>
+          </div>
+          <h3 class="rc-title">Systems Console</h3>
+          <p class="rc-summary">
+            A keyboard-driven developer interface with telemetry telemetry bars, interactive ASCII topology diagrams, and an instant modal intake for <kbd>R</kbd> (Role) and <kbd>P</kbd> (Project).
+          </p>
+          <ul class="rc-features">
+            <li><strong>Recruiter Scan:</strong> P99 latency, zero-copy allocations, and compiler AST benchmarks.</li>
+            <li><strong>Client Scoping:</strong> Rapid technical feasibility checks and scope definitions.</li>
+            <li><strong>Interaction:</strong> Keyboard navigation (<kbd>1</kbd>-<kbd>4</kbd>, <kbd>R</kbd>, <kbd>P</kbd>, <kbd>Esc</kbd>).</li>
+          </ul>
+          <div class="rc-actions">
+            <button class="btn-rc-view" data-launch="linear-systems">Switch Preview</button>
+            <a href="linear-systems/index.html" target="_blank" class="rc-link">Standalone ↗</a>
+          </div>
+        </div>
+
+        <!-- Card 4 -->
+        <div class="rationale-card">
+          <div class="rc-header">
+            <span class="rc-num">04</span>
+            <span class="rc-badge">Modular Bento</span>
+          </div>
+          <h3 class="rc-title">Spatial Bento Showcase</h3>
+          <p class="rc-summary">
+            Zero-scroll first viewport comprehension. Everything needed to judge the portfolio is visible immediately in high-density modular bento tiles, with modal detail inspectors.
+          </p>
+          <ul class="rc-features">
+            <li><strong>Recruiter Scan:</strong> Maximum 10-second scan rate across all 4 software domains.</li>
+            <li><strong>Client Scoping:</strong> High-impact visual deliverables and capability groupings.</li>
+            <li><strong>Interaction:</strong> Modal architecture inspectors with telemetry metrics.</li>
+          </ul>
+          <div class="rc-actions">
+            <button class="btn-rc-view" data-launch="bento-spatial">Switch Preview</button>
+            <a href="bento-spatial/index.html" target="_blank" class="rc-link">Standalone ↗</a>
+          </div>
+        </div>
+
+        <!-- Card 5 -->
+        <div class="rationale-card">
+          <div class="rc-header">
+            <span class="rc-num">05</span>
+            <span class="rc-badge">Scandinavian Minimal</span>
+          </div>
+          <h3 class="rc-title">Radical Minimalist Gallery</h3>
+          <p class="rc-summary">
+            Radical reduction of cognitive overhead. High-contrast typography drawers that expand on demand, allowing visitors to scan project titles in 15 seconds.
+          </p>
+          <ul class="rc-features">
+            <li><strong>Recruiter Scan:</strong> Zero distraction, pure focus on architectural trade-offs.</li>
+            <li><strong>Client Scoping:</strong> Streamlined intake form with automatic clipboard formatting.</li>
+            <li><strong>Interaction:</strong> Fast accordion drawers with instant copy actions.</li>
+          </ul>
+          <div class="rc-actions">
+            <button class="btn-rc-view" data-launch="kinetic-minimal">Switch Preview</button>
+            <a href="kinetic-minimal/index.html" target="_blank" class="rc-link">Standalone ↗</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Compliance Verification Table -->
+      <div class="compliance-box">
+        <h3 class="comp-heading">PRODUCT.md Directives Compliance Scorecard (Freelance Evolution)</h3>
+        <div class="comp-table-wrapper">
+          <table class="comp-table">
+            <thead>
+              <tr>
+                <th>Product Directive</th>
+                <th>Specification in PRODUCT.md</th>
+                <th>Implementation in Studio Monograph</th>
+                <th>Status</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>Freelance Direction</strong></td>
+                <td>Portfolio dedicated to independent client consulting &amp; product builds</td>
+                <td>Services breakdown (0-to-1 Builds, Concurrency, Design Tokens, Retainers) with explicit timelines and deliverables</td>
+                <td><span class="pill-pass">100% Met</span></td>
+              </tr>
+              <tr>
+                <td><strong>Multi-Channel Contact Access</strong></td>
+                <td>Easy, unhindered access for founders &amp; clients</td>
+                <td>Direct 1-click email copy, 20m discovery call booking, verified repos, timezone indicator, and structured brief generator</td>
+                <td><span class="pill-pass">100% Met</span></td>
+              </tr>
+              <tr>
+                <td><strong>Work &amp; Skills Legibility</strong></td>
+                <td>The work leads; skills sit beside it as a scannable companion</td>
+                <td>4 detailed client case studies paired with an Index of Practice referenced directly to each commission</td>
+                <td><span class="pill-pass">100% Met</span></td>
+              </tr>
+              <tr>
+                <td><strong>Identity &amp; Stand-in Policy</strong></td>
+                <td>Placeholder identity and explicitly marked stand-in studies</td>
+                <td><code>[Alex Mercer]</code>, <code>[Stand-in Client Project]</code> badges across all chapters and telemetry readings</td>
+                <td><span class="pill-pass">100% Met</span></td>
+              </tr>
+              <tr>
+                <td><strong>Zero Dependencies &amp; Portability</strong></td>
+                <td>Pure static HTML/CSS/Vanilla JS with print support</td>
+                <td>Zero runtime build requirements; fully responsive with print stylesheet for PDF exports</td>
+                <td><span class="pill-pass">100% Met</span></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="hub-footer">
+    <div class="hub-footer-inner">
+      <span>[Alex Mercer] Freelance Portfolio Suite • Selected Direction: Studio Monograph</span>
+      <span>Local Live Server Active</span>
+    </div>
+  </footer>
+
+  <script src="hub.js"></script>
+</body>
+</html>

@@ -1,0 +1,554 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script>document.documentElement.classList.add('js')</script>
+  <title>[Alex Mercer] — Product Engineering &amp; Systems (Prototype 1: Dual-Track Ledger)</title>
+  <link rel="stylesheet" href="../../shared/base.css">
+  <link rel="stylesheet" href="../../shared/switcher-badge.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Header / Navigation Bar -->
+  <header class="ledger-header">
+    <div class="header-brand">
+      <div class="brand-identity">
+        <span class="brand-name">[Alex Mercer]</span>
+        <span class="brand-role">Product Engineer &amp; Systems Designer</span>
+      </div>
+      <span class="badge-placeholder">Placeholder Identity</span>
+    </div>
+
+    <nav class="header-nav" aria-label="Audience Pathways">
+      <a href="#projects" class="nav-link">Shipped Work</a>
+      <a href="#capability-ledger" class="nav-link">Skills Ledger</a>
+      <div class="dual-cta-group">
+        <a href="#contact" class="btn-role" data-target-mode="role">Hire for Role</a>
+        <a href="#contact" class="btn-project" data-target-mode="client">Start Project</a>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Hero: Positioning & Immediate Scan -->
+  <section class="hero-strip">
+    <div class="hero-left">
+      <h1 class="hero-statement">
+        Building high-throughput distributed engines, collaborative web canvases, and robust design systems.
+      </h1>
+      <p class="hero-subtext">
+        Bridging infrastructure engineering with rigorous product craft. Serving technical teams seeking senior engineering leadership and companies commissioning high-leverage digital systems.
+      </p>
+      
+      <div class="standin-alert">
+        <svg class="alert-icon" viewBox="0 0 24 24" width="16" height="16" stroke="currentColor" stroke-width="2" fill="none"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="8" x2="12" y2="12"></line><line x1="12" y1="16" x2="12.01" y2="16"></line></svg>
+        <span>
+          <strong>Notice:</strong> All projects, architecture diagrams, and client telemetry below are explicitly labeled stand-ins to evaluate portfolio structure and UX. Personal history is uncommitted until replaced.
+        </span>
+      </div>
+    </div>
+
+    <div class="hero-dual-pathways">
+      <div class="pathway-card hiring-path">
+        <div class="pathway-header">
+          <span class="pathway-title">For Hiring Managers</span>
+          <span class="pathway-badge">Staff / Lead Engineer</span>
+        </div>
+        <p class="pathway-desc">
+          Evaluating systems architecture depth, concurrent programming, full-stack TypeScript, and technical stewardship.
+        </p>
+        <ul class="pathway-points">
+          <li>Direct access to architecture trade-offs &amp; code design</li>
+          <li>Capabilities tied to tangible project artifacts</li>
+          <li>Available for Senior / Staff / Advisory conversations</li>
+        </ul>
+        <a href="#contact" class="pathway-action" data-target-mode="role">Interview &amp; Role Intake →</a>
+      </div>
+
+      <div class="pathway-card client-path">
+        <div class="pathway-header">
+          <span class="pathway-title">For Prospective Clients</span>
+          <span class="pathway-badge">Architecture &amp; Build</span>
+        </div>
+        <p class="pathway-desc">
+          Commissioning zero-to-one product engineering, canvas graphics engines, or mission-critical API platforms.
+        </p>
+        <ul class="pathway-points">
+          <li>End-to-end delivery from RFC to production telemetry</li>
+          <li>Transparent weekly sprints and clean documentation</li>
+          <li>Available for Q3/Q4 engineering contracts</li>
+        </ul>
+        <a href="#contact" class="pathway-action" data-target-mode="client">Project Scoping Request →</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Main Split Layout: Shipped Projects & Synchronized Capability Ledger -->
+  <main class="workbench-container" id="projects">
+    <!-- Projects Stream -->
+    <div class="projects-stream">
+      <div class="stream-header">
+        <h2 class="section-title">Shipped Work &amp; Architecture Studies</h2>
+        <span class="section-meta">4 Demonstrative Case Studies (Stand-ins)</span>
+      </div>
+
+      <!-- Project 1 -->
+      <article class="project-entry" id="project-khepri" data-skills="Rust,Distributed Systems,WASM,Observability">
+        <div class="entry-meta-bar">
+          <span class="standin-pill">[Stand-in Project: Infrastructure]</span>
+          <span class="entry-year">Case Study A</span>
+        </div>
+
+        <h3 class="entry-title">Khepri — Distributed Event Mesh</h3>
+        <p class="entry-summary">
+          High-throughput event mesh designed for heterogeneous microservices requiring deterministic sub-millisecond dispatching under burst traffic volatility.
+        </p>
+
+        <div class="entry-detail-grid">
+          <div class="detail-block">
+            <span class="detail-label">The Engineering Challenge</span>
+            <p>Cascading backpressure during telemetry surges caused buffer exhaustion in conventional queue workers, forcing synchronous degradation.</p>
+          </div>
+          <div class="detail-block">
+            <span class="detail-label">Architectural Solution</span>
+            <p>Engineered a lock-free RingBuffer core in Rust with WebAssembly filter pipelines, zero-copy socket splicing, and adaptive Raft consensus.</p>
+          </div>
+        </div>
+
+        <!-- Interactive Spec / Diagram Viewer -->
+        <div class="interactive-spec-box">
+          <div class="spec-tabs">
+            <button class="spec-tab-btn active" data-tab="arch-1">System Topology</button>
+            <button class="spec-tab-btn" data-tab="code-1">Core Pipeline Logic</button>
+            <button class="spec-tab-btn" data-tab="metrics-1">Benchmark Readings</button>
+          </div>
+          <div class="spec-content active" id="arch-1">
+            <div class="topology-diagram">
+              <div class="node-box edge">Ingress Layer (TCP/QUIC)</div>
+              <div class="arrow-right">→</div>
+              <div class="node-box core">Lock-free RingBuffer (Rust)</div>
+              <div class="arrow-right">→</div>
+              <div class="node-box wasm">WASM Filter Sandbox</div>
+              <div class="arrow-right">→</div>
+              <div class="node-box sink">Dynamic Partition Subscribers</div>
+            </div>
+            <p class="diagram-caption">Stand-in Architecture Schematic: Zero-copy packet transition from NIC ring buffer to memory partitions.</p>
+          </div>
+          <div class="spec-content" id="code-1">
+            <pre class="code-snippet"><code>pub struct RingMesh<T: Copy> {
+    buffer: Arc<UnsafeCell<[T; CAPACITY]>>,
+    head: AtomicUsize,
+    tail: AtomicUsize,
+    partition_mask: usize,
+}
+// Zero-allocation batch dispatch
+impl<T: Copy> RingMesh<T> {
+    #[inline(always)]
+    pub fn try_push_batch(&self, items: &[T]) -> Result<(), OverflowErr> { ... }
+}</code></pre>
+          </div>
+          <div class="spec-content" id="metrics-1">
+            <div class="spec-metrics-table">
+              <div class="metric-row">
+                <span>P99 Dispatch Latency (Stand-in)</span>
+                <strong>420 µs</strong>
+              </div>
+              <div class="metric-row">
+                <span>Memory Allocation per Frame</span>
+                <strong>0 bytes (Zero-copy)</strong>
+              </div>
+              <div class="metric-row">
+                <span>Burst Throughput Capacity</span>
+                <strong>1,850,000 events/sec</strong>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="entry-footer">
+          <div class="entry-skills-list">
+            <span class="skill-tag highlighted">Rust</span>
+            <span class="skill-tag highlighted">Distributed Systems</span>
+            <span class="skill-tag highlighted">Zero-Copy Networking</span>
+            <span class="skill-tag highlighted">WASM</span>
+            <span class="skill-tag highlighted">OpenTelemetry</span>
+          </div>
+          <div class="entry-actions">
+            <button class="btn-text-action" data-mode="role" data-project="Khepri (Event Mesh)">Discuss Concurrency Patterns →</button>
+            <button class="btn-text-action client" data-mode="client" data-project="Khepri (Event Mesh)">Scope Infrastructure Project →</button>
+          </div>
+        </div>
+      </article>
+
+      <!-- Project 2 -->
+      <article class="project-entry" id="project-vesper" data-skills="TypeScript,WebGL,Canvas,CRDT,State Systems">
+        <div class="entry-meta-bar">
+          <span class="standin-pill">[Stand-in Project: Graphics &amp; Product]</span>
+          <span class="entry-year">Case Study B</span>
+        </div>
+
+        <h3 class="entry-title">Vesper — Spatial Data Canvas</h3>
+        <p class="entry-summary">
+          Infinite collaborative viewport rendering 250,000+ interactive nodes with real-time peer cursors, hierarchical spatial clustering, and zero UI stutter.
+        </p>
+
+        <div class="entry-detail-grid">
+          <div class="detail-block">
+            <span class="detail-label">The Engineering Challenge</span>
+            <p>Standard DOM and naive SVG canvas nodes drop below 15 FPS with more than 5,000 connected nodes under multi-user conflict resolution.</p>
+          </div>
+          <div class="detail-block">
+            <span class="detail-label">Architectural Solution</span>
+            <p>Developed custom WebGL2 instanced sprite shaders with spatial quadtrees and fractional index CRDT reconciliation running on Web Workers.</p>
+          </div>
+        </div>
+
+        <div class="interactive-spec-box">
+          <div class="spec-tabs">
+            <button class="spec-tab-btn active" data-tab="arch-2">Shader &amp; Worker Graph</button>
+            <button class="spec-tab-btn" data-tab="code-2">Quadtree Frustum Culling</button>
+            <button class="spec-tab-btn" data-tab="metrics-2">Frame Budget Telemetry</button>
+          </div>
+          <div class="spec-content active" id="arch-2">
+            <div class="topology-diagram">
+              <div class="node-box edge">WebSocket CRDT Stream</div>
+              <div class="arrow-right">→</div>
+              <div class="node-box core">Dedicated Worker (Quadtree)</div>
+              <div class="arrow-right">→</div>
+              <div class="node-box wasm">SharedArrayBuffer</div>
+              <div class="arrow-right">→</div>
+              <div class="node-box sink">WebGL2 Instanced Shaders</div>
+            </div>
+            <p class="diagram-caption">Stand-in Architecture Schematic: Main thread UI isolation via shared memory buffers and GPU instanced draws.</p>
+          </div>
+          <div class="spec-content" id="code-2">
+            <pre class="code-snippet"><code>// Spatial culling query against current camera viewport
+export function queryVisibleNodes(bounds: ViewportBounds, tree: SpatialQuadTree): Float32Array {
+  const visible = tree.queryBox(bounds.minX, bounds.minY, bounds.maxX, bounds.maxY);
+  return packInstancedBuffer(visible);
+}</code></pre>
+          </div>
+          <div class="spec-content" id="metrics-2">
+            <div class="spec-metrics-table">
+              <div class="metric-row">
+                <span>Viewport Render Rate</span>
+                <strong>60.0 FPS locked</strong>
+              </div>
+              <div class="metric-row">
+                <span>Maximum Active Canvas Nodes</span>
+                <strong>250,000+ nodes</strong>
+              </div>
+              <div class="metric-row">
+                <span>P95 Collaborative Sync Latency</span>
+                <strong>22 ms</strong>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="entry-footer">
+          <div class="entry-skills-list">
+            <span class="skill-tag highlighted">TypeScript</span>
+            <span class="skill-tag highlighted">WebGL2 / GLSL</span>
+            <span class="skill-tag highlighted">Spatial Indexing</span>
+            <span class="skill-tag highlighted">CRDTs (Yjs)</span>
+            <span class="skill-tag highlighted">Web Workers</span>
+          </div>
+          <div class="entry-actions">
+            <button class="btn-text-action" data-mode="role" data-project="Vesper (Spatial Canvas)">Review Graphics &amp; Frontend Craft →</button>
+            <button class="btn-text-action client" data-mode="client" data-project="Vesper (Spatial Canvas)">Commission Canvas / Tooling →</button>
+          </div>
+        </div>
+      </article>
+
+      <!-- Project 3 -->
+      <article class="project-entry" id="project-chronicle" data-skills="Go,Compilers,Developer Tools,GraphQL,APIs">
+        <div class="entry-meta-bar">
+          <span class="standin-pill">[Stand-in Project: Developer Platform]</span>
+          <span class="entry-year">Case Study C</span>
+        </div>
+
+        <h3 class="entry-title">Chronicle — Spec-First API Orchestrator</h3>
+        <p class="entry-summary">
+          Unified API schema engine parsing OpenAPI, GraphQL, and Protocol Buffers to generate deterministic client SDKs, mock servers, and breaking-change guards.
+        </p>
+
+        <div class="entry-detail-grid">
+          <div class="detail-block">
+            <span class="detail-label">The Engineering Challenge</span>
+            <p>Disparate schema protocols across polyglot microservices produced silent schema drift, phantom endpoints, and continuous client integration breakage.</p>
+          </div>
+          <div class="detail-block">
+            <span class="detail-label">Architectural Solution</span>
+            <p>Constructed an intermediate representation (IR) compiler in Go that unifies schema semantics, performs semantic diffing in CI, and auto-generates TypeScript/Swift types.</p>
+          </div>
+        </div>
+
+        <div class="entry-footer">
+          <div class="entry-skills-list">
+            <span class="skill-tag highlighted">Go</span>
+            <span class="skill-tag highlighted">Compiler / AST</span>
+            <span class="skill-tag highlighted">OpenAPI &amp; GraphQL</span>
+            <span class="skill-tag highlighted">Developer Tooling</span>
+            <span class="skill-tag highlighted">CI/CD Safety</span>
+          </div>
+          <div class="entry-actions">
+            <button class="btn-text-action" data-mode="role" data-project="Chronicle (API Engine)">Review API Architecture →</button>
+            <button class="btn-text-action client" data-mode="client" data-project="Chronicle (API Engine)">Audit Developer Tooling →</button>
+          </div>
+        </div>
+      </article>
+
+      <!-- Project 4 -->
+      <article class="project-entry" id="project-atelier" data-skills="Design Systems,Accessibility,CSS Architecture,Figma API">
+        <div class="entry-meta-bar">
+          <span class="standin-pill">[Stand-in Project: Design Engineering]</span>
+          <span class="entry-year">Case Study D</span>
+        </div>
+
+        <h3 class="entry-title">Atelier — Autonomous Design Token Engine</h3>
+        <p class="entry-summary">
+          Cross-platform design token compiler calculating perceptual contrast (OKLCH), generating theme variants, and exporting type-safe tokens for Web, iOS, and Android.
+        </p>
+
+        <div class="entry-detail-grid">
+          <div class="detail-block">
+            <span class="detail-label">The Engineering Challenge</span>
+            <p>Manual color palette management failed WCAG AAA in high-contrast edge cases and desynchronized design mockups from production native builds.</p>
+          </div>
+          <div class="detail-block">
+            <span class="detail-label">Architectural Solution</span>
+            <p>Built a dependency graph resolver computing APCA and WCAG contrast ratios in OKLCH color space with strict linting rules and multi-target code output.</p>
+          </div>
+        </div>
+
+        <div class="entry-footer">
+          <div class="entry-skills-list">
+            <span class="skill-tag highlighted">Design Systems</span>
+            <span class="skill-tag highlighted">WCAG AAA Accessibility</span>
+            <span class="skill-tag highlighted">OKLCH Color Math</span>
+            <span class="skill-tag highlighted">Token Compilers</span>
+            <span class="skill-tag highlighted">CSS Architecture</span>
+          </div>
+          <div class="entry-actions">
+            <button class="btn-text-action" data-mode="role" data-project="Atelier (Token Engine)">Evaluate Design Engineering →</button>
+            <button class="btn-text-action client" data-mode="client" data-project="Atelier (Token Engine)">Build Enterprise Design System →</button>
+          </div>
+        </div>
+      </article>
+    </div>
+
+    <!-- Sticky Synchronized Skills & Capability Ledger -->
+    <aside class="capability-ledger-rail" id="capability-ledger">
+      <div class="ledger-card">
+        <div class="ledger-header">
+          <h2 class="ledger-title">Skills &amp; Capabilities</h2>
+          <span class="ledger-subtitle">Tied directly to production builds</span>
+        </div>
+
+        <div class="ledger-filter-hint">Click any skill to isolate corresponding work:</div>
+
+        <div class="skill-family">
+          <span class="family-name">Systems &amp; Architecture</span>
+          <ul class="skill-items">
+            <li class="skill-item active" data-filter="Rust">
+              <span class="skill-name">Rust</span>
+              <span class="skill-assoc">Khepri</span>
+            </li>
+            <li class="skill-item" data-filter="Distributed Systems">
+              <span class="skill-name">Distributed Systems</span>
+              <span class="skill-assoc">Khepri</span>
+            </li>
+            <li class="skill-item" data-filter="Go">
+              <span class="skill-name">Go</span>
+              <span class="skill-assoc">Chronicle</span>
+            </li>
+            <li class="skill-item" data-filter="WASM">
+              <span class="skill-name">WebAssembly (WASM)</span>
+              <span class="skill-assoc">Khepri</span>
+            </li>
+          </ul>
+        </div>
+
+        <div class="skill-family">
+          <span class="family-name">Frontend Systems &amp; Graphics</span>
+          <ul class="skill-items">
+            <li class="skill-item" data-filter="TypeScript">
+              <span class="skill-name">Full-Stack TypeScript</span>
+              <span class="skill-assoc">Vesper, Atelier</span>
+            </li>
+            <li class="skill-item" data-filter="WebGL">
+              <span class="skill-name">WebGL2 &amp; Shaders</span>
+              <span class="skill-assoc">Vesper</span>
+            </li>
+            <li class="skill-item" data-filter="Canvas">
+              <span class="skill-name">Spatial Indexing &amp; CRDT</span>
+              <span class="skill-assoc">Vesper</span>
+            </li>
+            <li class="skill-item" data-filter="Design Systems">
+              <span class="skill-name">Design Systems &amp; Tokens</span>
+              <span class="skill-assoc">Atelier</span>
+            </li>
+            <li class="skill-item" data-filter="Accessibility">
+              <span class="skill-name">WCAG AAA Accessibility</span>
+              <span class="skill-assoc">Atelier</span>
+            </li>
+          </ul>
+        </div>
+
+        <div class="skill-family">
+          <span class="family-name">Developer Experience &amp; APIs</span>
+          <ul class="skill-items">
+            <li class="skill-item" data-filter="Compilers">
+              <span class="skill-name">Compilers &amp; AST Parsing</span>
+              <span class="skill-assoc">Chronicle</span>
+            </li>
+            <li class="skill-item" data-filter="GraphQL">
+              <span class="skill-name">GraphQL &amp; OpenAPI Spec</span>
+              <span class="skill-assoc">Chronicle</span>
+            </li>
+            <li class="skill-item" data-filter="Observability">
+              <span class="skill-name">Telemetry &amp; CI Guardrails</span>
+              <span class="skill-assoc">Khepri, Chronicle</span>
+            </li>
+          </ul>
+        </div>
+
+        <button class="btn-clear-filter" id="btnClearFilter" style="display: none;">
+          Clear Filter (Show All 4 Projects)
+        </button>
+
+        <div class="ledger-quick-audit">
+          <div class="audit-stat">
+            <span class="audit-val">4</span>
+            <span class="audit-lbl">Stand-in Studies</span>
+          </div>
+          <div class="audit-stat">
+            <span class="audit-val">100%</span>
+            <span class="audit-lbl">Artifact Coverage</span>
+          </div>
+          <div class="audit-stat">
+            <span class="audit-val">Zero</span>
+            <span class="audit-lbl">Invented Claims</span>
+          </div>
+        </div>
+      </div>
+    </aside>
+  </main>
+
+  <!-- Interactive Dual Contact Section -->
+  <section class="contact-section" id="contact">
+    <div class="contact-header-area">
+      <h2 class="contact-title">Start a Conversation</h2>
+      <p class="contact-subtitle">
+        Whether assessing engineering fit for a core staff role or scoping a technical client engagement, choose your pathway below for a structured intake.
+      </p>
+    </div>
+
+    <!-- Mode Selector Tabs -->
+    <div class="contact-switch-tabs" role="tablist">
+      <button class="switch-tab active" id="tabHiring" role="tab" aria-selected="true" data-mode="role">
+        <span class="tab-badge">Pathway A</span>
+        <span class="tab-title">Discuss a Role (Hiring / Staff / Lead)</span>
+      </button>
+      <button class="switch-tab" id="tabClient" role="tab" aria-selected="false" data-mode="client">
+        <span class="tab-badge">Pathway B</span>
+        <span class="tab-title">Initiate a Project (Client / Contract)</span>
+      </button>
+    </div>
+
+    <div class="contact-form-card">
+      <!-- Role Form -->
+      <form class="contact-form active" id="formRole">
+        <div class="form-grid">
+          <div class="form-field">
+            <label for="roleOrg">Company / Organization</label>
+            <input type="text" id="roleOrg" placeholder="e.g. Acme Systems or Seed-stage venture" required>
+          </div>
+          <div class="form-field">
+            <label for="roleTitle">Target Role / Capacity</label>
+            <select id="roleTitle" required>
+              <option value="Staff Systems Engineer">Staff / Principal Systems Engineer</option>
+              <option value="Lead Product Engineer">Lead Frontend / Product Engineer</option>
+              <option value="Head of Engineering">Founding Engineer / Head of Engineering</option>
+              <option value="Advisory / Part-Time">Technical Advisory / Fractional Leadership</option>
+            </select>
+          </div>
+          <div class="form-field full-width">
+            <label for="roleContext">Team Stage, Architecture Focus, or Role Link</label>
+            <textarea id="roleContext" rows="3" placeholder="Paste role brief, describe current tech challenges, or specify relevant projects (e.g. Khepri, Vesper)"></textarea>
+          </div>
+        </div>
+        <div class="form-footer">
+          <div class="contact-direct-hint">
+            Direct Address: <span class="standin-inline">[contact-placeholder@domain.com]</span>
+          </div>
+          <button type="submit" class="btn-submit-action">Prepare Role Email Draft →</button>
+        </div>
+        <div class="copy-success-banner" id="roleSuccessMsg">
+          ✓ Draft formatted and ready to send. Pre-populated template copied to clipboard!
+        </div>
+      </form>
+
+      <!-- Client Form -->
+      <form class="contact-form" id="formClient">
+        <div class="form-grid">
+          <div class="form-field">
+            <label for="clientOrg">Client Name / Studio</label>
+            <input type="text" id="clientOrg" placeholder="e.g. Studio Vertex or Venture Lab" required>
+          </div>
+          <div class="form-field">
+            <label for="clientScope">Project Scope &amp; Objective</label>
+            <select id="clientScope" required>
+              <option value="0-to-1 Product Build">0-to-1 Web Application / Canvas Build</option>
+              <option value="High-Throughput Infrastructure">Distributed Infrastructure / Rust Microservices</option>
+              <option value="Design System & Tokens">Multi-platform Design Tokens & Accessibility</option>
+              <option value="Architecture Audit">System Architecture & Performance Audit</option>
+            </select>
+          </div>
+          <div class="form-field">
+            <label for="clientTimeline">Estimated Target Timeline</label>
+            <select id="clientTimeline">
+              <option value="Immediate (Next 2-4 weeks)">Immediate (Next 2-4 weeks)</option>
+              <option value="Q3 / Q4 2026">Q3 / Q4 2026</option>
+              <option value="Flexible / Exploratory">Flexible / Exploratory</option>
+            </select>
+          </div>
+          <div class="form-field full-width">
+            <label for="clientContext">Scope Details or Reference Constraints</label>
+            <textarea id="clientContext" rows="3" placeholder="Outline deliverables, technical stack requirements, or benchmark targets"></textarea>
+          </div>
+        </div>
+        <div class="form-footer">
+          <div class="contact-direct-hint">
+            Direct Address: <span class="standin-inline">[client-inquiries-placeholder@domain.com]</span>
+          </div>
+          <button type="submit" class="btn-submit-action">Prepare Project Scoping Draft →</button>
+        </div>
+        <div class="copy-success-banner" id="clientSuccessMsg">
+          ✓ Scoping brief formatted and ready to send. Project intake template copied to clipboard!
+        </div>
+      </form>
+    </div>
+  </section>
+
+  <!-- Grounded Footer -->
+  <footer class="ledger-footer">
+    <div class="footer-inner">
+      <div class="footer-left">
+        <span class="footer-brand">[Alex Mercer] — Portfolio Prototype</span>
+        <p class="footer-notice">
+          Built according to <code>PRODUCT.md</code> directives: Stand-in projects explicitly marked. Equal outcomes for hiring and commission.
+        </p>
+      </div>
+      <div class="footer-right">
+        <a href="../../index.html" class="footer-link">Master Prototype Hub</a>
+        <a href="#projects" class="footer-link">Back to Top ↑</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="app.js"></script>
+  <script src="../../shared/switcher-badge.js"></script>
+</body>
+</html>

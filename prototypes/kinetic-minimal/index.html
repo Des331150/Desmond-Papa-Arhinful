@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script>document.documentElement.classList.add('js')</script>
+  <title>[Alex Mercer] — Minimal Gallery (Prototype 5: Radical Minimalist)</title>
+  <link rel="stylesheet" href="../../shared/base.css">
+  <link rel="stylesheet" href="../../shared/switcher-badge.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="minimal-body">
+  <div class="minimal-frame">
+    <!-- Header -->
+    <header class="min-header">
+      <div class="min-identity">
+        <span class="min-name">[Alex Mercer]</span>
+        <span class="min-practice">Product Engineer &amp; Systems Architect (Placeholder)</span>
+      </div>
+      <div class="min-status">
+        <span class="min-dot"></span>
+        <span>Prototype 05 // Minimalist Gallery</span>
+      </div>
+    </header>
+
+    <!-- Thesis / Intro -->
+    <section class="min-intro">
+      <h1 class="min-statement">
+        Distributed engines. Collaborative graphics. Type-safe platforms.
+      </h1>
+      <p class="min-lead">
+        Radical reduction of cognitive noise for high-speed evaluation. Click any entry below to inspect architectural implementation and telemetry readings.
+      </p>
+
+      <div class="min-pathway-pills">
+        <a href="#intake" class="min-pill role" data-min-tab="role">For Hiring Teams: Role Inquiries ↓</a>
+        <a href="#intake" class="min-pill client" data-min-tab="client">For Clients: Project Scoping ↓</a>
+      </div>
+
+      <div class="min-standin-alert">
+        Notice: All 4 projects below are demonstrative stand-in studies per <code>PRODUCT.md</code>. Real metrics, identity, and clients remain uninvented.
+      </div>
+    </section>
+
+    <!-- Expandable Project Roster -->
+    <main class="min-project-roster">
+      <!-- Project 1 -->
+      <div class="min-drawer" id="drawer-khepri">
+        <button class="drawer-header" aria-expanded="false">
+          <div class="drawer-left">
+            <span class="drawer-tag">[Stand-in // Systems]</span>
+            <span class="drawer-title">Khepri: Distributed Event Mesh</span>
+          </div>
+          <div class="drawer-right">
+            <span class="drawer-skills">Rust · WASM · Raft · Zero-Copy</span>
+            <span class="drawer-chevron">+</span>
+          </div>
+        </button>
+        <div class="drawer-body">
+          <div class="drawer-content-grid">
+            <div class="content-block">
+              <span class="content-title">Core Architecture</span>
+              <p>Lock-free RingBuffer engineered in Rust to eliminate lock contention during volatile telemetry bursts. Slices network packets via direct zero-copy socket ring buffers without intermediary heap copies.</p>
+            </div>
+            <div class="content-block">
+              <span class="content-title">Technical Telemetry</span>
+              <p>P99 latency locked under 420 µs at 1.85M events/second. Sub-microsecond execution inside sandboxed WebAssembly filter plugins.</p>
+            </div>
+          </div>
+          <div class="drawer-action-bar">
+            <a href="#intake" class="drawer-btn" data-min-tab="role">Evaluate Systems &amp; Concurrency →</a>
+            <a href="#intake" class="drawer-btn client" data-min-tab="client">Scope Backend Infrastructure →</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Project 2 -->
+      <div class="min-drawer" id="drawer-vesper">
+        <button class="drawer-header" aria-expanded="false">
+          <div class="drawer-left">
+            <span class="drawer-tag">[Stand-in // Graphics]</span>
+            <span class="drawer-title">Vesper: Spatial Data Canvas</span>
+          </div>
+          <div class="drawer-right">
+            <span class="drawer-skills">TypeScript · WebGL2 · CRDT · Workers</span>
+            <span class="drawer-chevron">+</span>
+          </div>
+        </button>
+        <div class="drawer-body">
+          <div class="drawer-content-grid">
+            <div class="content-block">
+              <span class="content-title">Core Architecture</span>
+              <p>Hardware-accelerated infinite viewport rendering 250,000+ interactive nodes. Leverages instanced GLSL shaders on the GPU and off-thread quadtrees running in Web Workers over SharedArrayBuffers.</p>
+            </div>
+            <div class="content-block">
+              <span class="content-title">Technical Telemetry</span>
+              <p>Deterministic 60.0 FPS rendering performance with multi-user cursor sync latency of 22 ms via Yjs fractional index conflict resolution.</p>
+            </div>
+          </div>
+          <div class="drawer-action-bar">
+            <a href="#intake" class="drawer-btn" data-min-tab="role">Review WebGL Graphics Craft →</a>
+            <a href="#intake" class="drawer-btn client" data-min-tab="client">Commission Canvas Tooling →</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Project 3 -->
+      <div class="min-drawer" id="drawer-chronicle">
+        <button class="drawer-header" aria-expanded="false">
+          <div class="drawer-left">
+            <span class="drawer-tag">[Stand-in // Compilers]</span>
+            <span class="drawer-title">Chronicle: Spec-First API Orchestrator</span>
+          </div>
+          <div class="drawer-right">
+            <span class="drawer-skills">Go · AST · OpenAPI · GraphQL</span>
+            <span class="drawer-chevron">+</span>
+          </div>
+        </button>
+        <div class="drawer-body">
+          <div class="drawer-content-grid">
+            <div class="content-block">
+              <span class="content-title">Core Architecture</span>
+              <p>Abstract Syntax Tree compiler written in Go that ingests polyglot API schemas (OpenAPI, GraphQL, Protobuf) and compiles them into a unified intermediate representation.</p>
+            </div>
+            <div class="content-block">
+              <span class="content-title">Technical Telemetry</span>
+              <p>Generates type-safe SDKs for TypeScript and Swift in 1.8 seconds. Enforces zero schema drift regressions across 40+ independent engineering teams.</p>
+            </div>
+          </div>
+          <div class="drawer-action-bar">
+            <a href="#intake" class="drawer-btn" data-min-tab="role">Review Go Platform Tooling →</a>
+            <a href="#intake" class="drawer-btn client" data-min-tab="client">Audit API Strategy →</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Project 4 -->
+      <div class="min-drawer" id="drawer-atelier">
+        <button class="drawer-header" aria-expanded="false">
+          <div class="drawer-left">
+            <span class="drawer-tag">[Stand-in // Design Eng]</span>
+            <span class="drawer-title">Atelier: Autonomous Design Token Engine</span>
+          </div>
+          <div class="drawer-right">
+            <span class="drawer-skills">Design Tokens · OKLCH · WCAG AAA</span>
+            <span class="drawer-chevron">+</span>
+          </div>
+        </button>
+        <div class="drawer-body">
+          <div class="drawer-content-grid">
+            <div class="content-block">
+              <span class="content-title">Core Architecture</span>
+              <p>Cross-platform token compiler executing perceptual contrast algorithms in OKLCH space. Pre-computes guaranteed accessible themes for Web, iOS, and Android without client calculation overhead.</p>
+            </div>
+            <div class="content-block">
+              <span class="content-title">Technical Telemetry</span>
+              <p>100% automated WCAG AAA compliance guarantee with zero runtime bundle impact (0 kB) and seamless multi-brand token exports.</p>
+            </div>
+          </div>
+          <div class="drawer-action-bar">
+            <a href="#intake" class="drawer-btn" data-min-tab="role">Assess Design Systems Rigor →</a>
+            <a href="#intake" class="drawer-btn client" data-min-tab="client">Commission Token Library →</a>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <!-- Skills Summary Strip -->
+    <section class="min-skills-strip">
+      <div class="skills-col">
+        <span class="col-title">Systems &amp; Runtimes</span>
+        <p>Rust, Go, WebAssembly, Lock-Free Concurrency, Raft Consensus, Zero-Copy IO</p>
+      </div>
+      <div class="skills-col">
+        <span class="col-title">Frontend &amp; Graphics</span>
+        <p>TypeScript, WebGL2, GLSL Shaders, Spatial Quadtrees, Yjs CRDTs, SharedArrayBuffers</p>
+      </div>
+      <div class="skills-col">
+        <span class="col-title">Design Engineering</span>
+        <p>Design Tokens, OKLCH Color Space, WCAG AAA Accessibility, Cross-Platform Architecture</p>
+      </div>
+    </section>
+
+    <!-- Rapid Intake Section -->
+    <section class="min-intake-section" id="intake">
+      <div class="intake-header">
+        <h2 class="intake-title">Initiate Conversation</h2>
+        <p class="intake-desc">Equal pathways for senior hiring conversations and project commissions.</p>
+      </div>
+
+      <div class="min-tabs-row">
+        <button class="min-tab-btn active" id="tabRoleMin">Role / Hiring</button>
+        <button class="min-tab-btn" id="tabClientMin">Project / Commission</button>
+      </div>
+
+      <div class="min-form-container" id="formRoleMin">
+        <div class="min-input-grid">
+          <input type="text" id="roleOrgMin" placeholder="Organization / Company" class="min-input">
+          <select id="roleTypeMin" class="min-input">
+            <option>Staff / Principal Systems Engineer</option>
+            <option>Lead Frontend &amp; Graphics Engineer</option>
+            <option>Founding Engineer / VP Engineering</option>
+            <option>Technical Advisory / Fractional Lead</option>
+          </select>
+          <textarea id="roleNotesMin" rows="3" placeholder="Context, tech stack, or specific role brief..." class="min-input full"></textarea>
+        </div>
+        <div class="min-submit-row">
+          <span class="min-addr">Direct: <code>[role-placeholder@domain.com]</code></span>
+          <button class="min-action-btn" id="btnCopyRoleMin">Copy Formatted Role Draft →</button>
+        </div>
+        <div class="min-alert" id="roleAlertMin">✓ Template copied to clipboard!</div>
+      </div>
+
+      <div class="min-form-container" id="formClientMin" style="display: none;">
+        <div class="min-input-grid">
+          <input type="text" id="clientOrgMin" placeholder="Client Studio / Venture" class="min-input">
+          <select id="clientTypeMin" class="min-input">
+            <option>0-to-1 Web Application &amp; Canvas Build</option>
+            <option>High-Throughput Distributed Microservices</option>
+            <option>Enterprise Design System &amp; Tokens</option>
+            <option>Architecture &amp; Performance Audit</option>
+          </select>
+          <textarea id="clientNotesMin" rows="3" placeholder="Scope deliverables, timeline, or architecture constraints..." class="min-input full"></textarea>
+        </div>
+        <div class="min-submit-row">
+          <span class="min-addr">Direct: <code>[commissions-placeholder@domain.com]</code></span>
+          <button class="min-action-btn client" id="btnCopyClientMin">Copy Project Scoping Brief →</button>
+        </div>
+        <div class="min-alert" id="clientAlertMin">✓ Scoping brief copied to clipboard!</div>
+      </div>
+    </section>
+
+    <!-- Minimal Colophon -->
+    <footer class="min-footer">
+      <div>[Alex Mercer] — Prototype 05 (Radical Minimalist)</div>
+      <div>
+        <a href="../../index.html">Master Prototype Hub ↗</a>
+      </div>
+    </footer>
+  </div>
+
+  <script src="app.js"></script>
+  <script src="../../shared/switcher-badge.js"></script>
+</body>
+</html>

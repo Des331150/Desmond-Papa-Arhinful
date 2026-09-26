@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script>document.documentElement.classList.add('js')</script>
+  <title>[Alex Mercer] — Systems Console (Prototype 3: Linear Systems)</title>
+  <link rel="stylesheet" href="../../shared/base.css">
+  <link rel="stylesheet" href="../../shared/switcher-badge.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="systems-theme">
+  <!-- Top Telemetry Bar -->
+  <header class="console-top-bar">
+    <div class="top-bar-left">
+      <div class="status-indicator">
+        <span class="status-pulse"></span>
+        <span class="status-label">SYS_READY // STAND-IN PORTFOLIO SPEC</span>
+      </div>
+      <div class="identity-tag">
+        <span class="name">[Alex Mercer]</span>
+        <span class="role">Product Engineer &amp; Systems Architect (Placeholder)</span>
+      </div>
+    </div>
+    <div class="top-bar-right">
+      <div class="shortcut-hints">
+        <span class="hint-pill">Press <kbd>1</kbd>-<kbd>4</kbd> to inspect</span>
+        <span class="hint-pill">Press <kbd>R</kbd> for Role</span>
+        <span class="hint-pill">Press <kbd>P</kbd> for Project</span>
+      </div>
+    </div>
+  </header>
+
+  <!-- Interactive Terminal Nav Header -->
+  <div class="console-hero">
+    <div class="hero-left">
+      <h1 class="hero-title">Distributed Systems, WebGL Graphics &amp; Platform Architecture</h1>
+      <p class="hero-desc">
+        A high-velocity technical portfolio built for rapid evaluation. Every case study below is an explicitly labeled architecture stand-in demonstrating technical design, concurrency trade-offs, and frontend craft.
+      </p>
+    </div>
+    <div class="hero-quick-actions">
+      <div class="action-card role-box">
+        <div class="card-tag">AUDIENCE: RECRUITERS &amp; TECH LEADS</div>
+        <div class="card-title">Senior / Staff Role Fit</div>
+        <p class="card-p">Concurrency patterns, Rust memory models, browser render pipelines, team mentorship.</p>
+        <button class="btn-console role" id="btnTriggerRoleModal">Open Role Intake [R] →</button>
+      </div>
+      <div class="action-card client-box">
+        <div class="card-tag">AUDIENCE: CLIENTS &amp; VENTURES</div>
+        <div class="card-title">Technical Commission</div>
+        <p class="card-p">0-to-1 canvas applications, high-throughput backend services, enterprise token systems.</p>
+        <button class="btn-console client" id="btnTriggerClientModal">Scope Project [P] →</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Interactive Capability Filter Bar -->
+  <div class="filter-strip">
+    <span class="filter-label">Filter by Capability:</span>
+    <div class="filter-tags" id="filterTags">
+      <button class="tag-btn active" data-filter="all">All Systems (4)</button>
+      <button class="tag-btn" data-filter="rust">Rust &amp; Concurrency</button>
+      <button class="tag-btn" data-filter="webgl">WebGL2 &amp; Shaders</button>
+      <button class="tag-btn" data-filter="crdt">CRDTs &amp; Real-Time</button>
+      <button class="tag-btn" data-filter="go">Go &amp; Compilers</button>
+      <button class="tag-btn" data-filter="design-tokens">Design Systems (OKLCH)</button>
+    </div>
+  </div>
+
+  <!-- Main Grid: Systems Inspector & Project Cards -->
+  <main class="console-grid">
+    <!-- Project 1 -->
+    <article class="system-card" id="card-1" data-tags="rust,concurrency,distributed">
+      <div class="card-meta">
+        <span class="card-id">SYS-01 // RUST CORE</span>
+        <span class="standin-mark">[Stand-in Project]</span>
+      </div>
+      <h2 class="card-heading">Khepri: Distributed Event Mesh</h2>
+      <p class="card-summary">
+        Kernel-bypass lock-free event distribution system designed for microsecond-latency event routing under extreme traffic surges.
+      </p>
+
+      <div class="telemetry-bar">
+        <div class="telemetry-item">
+          <span class="tel-label">P99 LATENCY</span>
+          <span class="tel-val green">420 µs</span>
+        </div>
+        <div class="telemetry-item">
+          <span class="tel-label">THROUGHPUT</span>
+          <span class="tel-val">1.85M ev/s</span>
+        </div>
+        <div class="telemetry-item">
+          <span class="tel-label">ALLOCATION</span>
+          <span class="tel-val">0 bytes/frame</span>
+        </div>
+      </div>
+
+      <div class="arch-tabs">
+        <button class="tab-link active" data-target="khepri-arch">Architecture Diagram</button>
+        <button class="tab-link" data-target="khepri-tech">Skills &amp; Trade-offs</button>
+      </div>
+
+      <div class="tab-panel active" id="khepri-arch">
+        <div class="ascii-diagram">
+┌────────────────┐     ┌──────────────────────┐     ┌─────────────────────┐
+│  QUIC / TCP    │ ──> │ Lock-free RingBuffer │ ──> │ WASM Sandbox Filter │
+│  Ingress Ring  │     │ (Zero-Copy Mutexless)│     │ (Sub-microsecond)   │
+└────────────────┘     └──────────────────────┘     └─────────────────────┘
+        </div>
+      </div>
+
+      <div class="tab-panel" id="khepri-tech">
+        <p class="panel-notes">
+          <strong>Key Skills:</strong> Rust, RingBuffer concurrency, Raft consensus, WebAssembly runtimes, Linux epoll zero-copy.<br>
+          <strong>Trade-off:</strong> Prioritized bounded memory footprint over unbounded queue flexibility to prevent OOM cascades under denial-of-service surges.
+        </p>
+      </div>
+
+      <div class="card-footer">
+        <div class="card-actions">
+          <button class="action-btn" data-action="role" data-subj="Khepri Architecture Review">Discuss Role Fit →</button>
+          <button class="action-btn client" data-action="client" data-subj="Khepri Infrastructure Engagement">Scope Project →</button>
+        </div>
+      </div>
+    </article>
+
+    <!-- Project 2 -->
+    <article class="system-card" id="card-2" data-tags="webgl,crdt,typescript">
+      <div class="card-meta">
+        <span class="card-id">SYS-02 // GRAPHICS &amp; CRDT</span>
+        <span class="standin-mark">[Stand-in Project]</span>
+      </div>
+      <h2 class="card-heading">Vesper: Spatial Data Canvas</h2>
+      <p class="card-summary">
+        Hardware-accelerated web canvas capable of rendering 250,000+ interactive nodes with multi-cursor collaborative state synchronization.
+      </p>
+
+      <div class="telemetry-bar">
+        <div class="telemetry-item">
+          <span class="tel-label">FRAME RATE</span>
+          <span class="tel-val green">60.0 FPS</span>
+        </div>
+        <div class="telemetry-item">
+          <span class="tel-label">MAX NODES</span>
+          <span class="tel-val">250,000</span>
+        </div>
+        <div class="telemetry-item">
+          <span class="tel-label">SYNC JANK</span>
+          <span class="tel-val">0.0 ms</span>
+        </div>
+      </div>
+
+      <div class="arch-tabs">
+        <button class="tab-link active" data-target="vesper-arch">Architecture Diagram</button>
+        <button class="tab-link" data-target="vesper-tech">Skills &amp; Trade-offs</button>
+      </div>
+
+      <div class="tab-panel active" id="vesper-arch">
+        <div class="ascii-diagram">
+┌────────────────┐     ┌──────────────────────┐     ┌─────────────────────┐
+│ Web Worker     │ ──> │ SharedArrayBuffer    │ ──> │ WebGL2 Instanced    │
+│ Quadtree Index │     │ (Zero Thread Copy)   │     │ Draw Pipeline (GPU) │
+└────────────────┘     └──────────────────────┘     └─────────────────────┘
+        </div>
+      </div>
+
+      <div class="tab-panel" id="vesper-tech">
+        <p class="panel-notes">
+          <strong>Key Skills:</strong> TypeScript, WebGL2, GLSL Shaders, Yjs CRDTs, SharedArrayBuffers, Off-thread Web Workers.<br>
+          <strong>Trade-off:</strong> Chose custom instanced GLSL pipeline over generic React Canvas abstractions to ensure smooth 60fps pan/zoom navigation at 250k nodes.
+        </p>
+      </div>
+
+      <div class="card-footer">
+        <div class="card-actions">
+          <button class="action-btn" data-action="role" data-subj="Vesper Graphics Review">Discuss Role Fit →</button>
+          <button class="action-btn client" data-action="client" data-subj="Vesper Canvas Commission">Scope Project →</button>
+        </div>
+      </div>
+    </article>
+
+    <!-- Project 3 -->
+    <article class="system-card" id="card-3" data-tags="go,compilers">
+      <div class="card-meta">
+        <span class="card-id">SYS-03 // COMPILER ENGINE</span>
+        <span class="standin-mark">[Stand-in Project]</span>
+      </div>
+      <h2 class="card-heading">Chronicle: Spec-First API Orchestrator</h2>
+      <p class="card-summary">
+        Cross-protocol AST compiler resolving OpenAPI, GraphQL, and Protobuf schemas into unified intermediate representations for type-safe code generation.
+      </p>
+
+      <div class="telemetry-bar">
+        <div class="telemetry-item">
+          <span class="tel-label">COMPILE TIME</span>
+          <span class="tel-val green">&lt; 1.8s</span>
+        </div>
+        <div class="telemetry-item">
+          <span class="tel-label">TEAMS SERVED</span>
+          <span class="tel-val">40+</span>
+        </div>
+        <div class="telemetry-item">
+          <span class="tel-label">SCHEMA DRIFT</span>
+          <span class="tel-val">0 Regressions</span>
+        </div>
+      </div>
+
+      <div class="arch-tabs">
+        <button class="tab-link active" data-target="chronicle-arch">Architecture Diagram</button>
+        <button class="tab-link" data-target="chronicle-tech">Skills &amp; Trade-offs</button>
+      </div>
+
+      <div class="tab-panel active" id="chronicle-arch">
+        <div class="ascii-diagram">
+┌────────────────┐     ┌──────────────────────┐     ┌─────────────────────┐
+│ Polyglot Specs │ ──> │ Chronicle IR Parser  │ ──> │ TypeScript & Swift  │
+│ (OpenAPI / GQL)│     │ (Semantic AST Diff)  │     │ Deterministic SDKs  │
+└────────────────┘     └──────────────────────┘     └─────────────────────┘
+        </div>
+      </div>
+
+      <div class="tab-panel" id="chronicle-tech">
+        <p class="panel-notes">
+          <strong>Key Skills:</strong> Go, AST Compilers, OpenAPI, GraphQL, CI/CD static verification, Developer Platforms.<br>
+          <strong>Trade-off:</strong> Enforced strict schema compilation during CI rather than dynamic runtime gateways, ensuring total compile-time type safety.
+        </p>
+      </div>
+
+      <div class="card-footer">
+        <div class="card-actions">
+          <button class="action-btn" data-action="role" data-subj="Chronicle API Review">Discuss Role Fit →</button>
+          <button class="action-btn client" data-action="client" data-subj="Chronicle Tooling Audit">Scope Project →</button>
+        </div>
+      </div>
+    </article>
+
+    <!-- Project 4 -->
+    <article class="system-card" id="card-4" data-tags="design-tokens,typescript">
+      <div class="card-meta">
+        <span class="card-id">SYS-04 // DESIGN ENGINEERING</span>
+        <span class="standin-mark">[Stand-in Project]</span>
+      </div>
+      <h2 class="card-heading">Atelier: Autonomous Design Token Engine</h2>
+      <p class="card-summary">
+        Algorithmic token engine computing perceptual contrast in OKLCH space and publishing verified WCAG AAA accessible design tokens across Web, iOS, and Android.
+      </p>
+
+      <div class="telemetry-bar">
+        <div class="telemetry-item">
+          <span class="tel-label">ACCESSIBILITY</span>
+          <span class="tel-val green">WCAG AAA</span>
+        </div>
+        <div class="telemetry-item">
+          <span class="tel-label">PLATFORMS</span>
+          <span class="tel-val">Web, iOS, Android</span>
+        </div>
+        <div class="telemetry-item">
+          <span class="tel-label">RUNTIME COST</span>
+          <span class="tel-val">0 kB</span>
+        </div>
+      </div>
+
+      <div class="arch-tabs">
+        <button class="tab-link active" data-target="atelier-arch">Architecture Diagram</button>
+        <button class="tab-link" data-target="atelier-tech">Skills &amp; Trade-offs</button>
+      </div>
+
+      <div class="tab-panel active" id="atelier-arch">
+        <div class="ascii-diagram">
+┌────────────────┐     ┌──────────────────────┐     ┌─────────────────────┐
+│ Token Source   │ ──> │ OKLCH Luminance Math │ ──> │ Multi-Platform      │
+│ (Figma / JSON) │     │ (Automated WCAG AAA) │     │ Pure CSS & Swift    │
+└────────────────┘     └──────────────────────┘     └─────────────────────┘
+        </div>
+      </div>
+
+      <div class="tab-panel" id="atelier-tech">
+        <p class="panel-notes">
+          <strong>Key Skills:</strong> Design Tokens, OKLCH Color Space, WCAG AAA Accessibility, CSS Custom Properties, Cross-Platform Architecture.<br>
+          <strong>Trade-off:</strong> Calculated all token permutations ahead-of-time in CI rather than evaluating color math dynamically in client JavaScript.
+        </p>
+      </div>
+
+      <div class="card-footer">
+        <div class="card-actions">
+          <button class="action-btn" data-action="role" data-subj="Atelier Token Review">Discuss Role Fit →</button>
+          <button class="action-btn client" data-action="client" data-subj="Atelier Design System Build">Scope Project →</button>
+        </div>
+      </div>
+    </article>
+  </main>
+
+  <!-- Interactive Modal: Role & Project Intake -->
+  <div class="console-modal" id="consoleModal" aria-hidden="true">
+    <div class="modal-backdrop" id="modalBackdrop"></div>
+    <div class="modal-dialog">
+      <div class="modal-header">
+        <span class="modal-title" id="modalTitle">ROLE INTAKE // RECRUITER CHANNEL</span>
+        <button class="btn-close-modal" id="btnCloseModal" aria-label="Close modal">✕</button>
+      </div>
+      <div class="modal-body">
+        <div class="modal-tabs">
+          <button class="m-tab active" id="mTabRole">Role / Staff Hiring</button>
+          <button class="m-tab" id="mTabClient">Project / Commission</button>
+        </div>
+
+        <!-- Role Form -->
+        <div class="m-form active" id="mFormRole">
+          <p class="m-desc">Format an intake brief for senior engineering, staff roles, or leadership advisory.</p>
+          <div class="m-field">
+            <label>Organization / Venture</label>
+            <input type="text" id="mRoleOrg" placeholder="e.g. Acme Cloud Corp">
+          </div>
+          <div class="m-field">
+            <label>Position Capacity</label>
+            <select id="mRoleTitle">
+              <option>Staff Systems Engineer (Distributed / Rust)</option>
+              <option>Lead Frontend &amp; Graphics Engineer (TypeScript / WebGL)</option>
+              <option>Principal Platform Architect</option>
+              <option>Fractional Technical Leadership</option>
+            </select>
+          </div>
+          <div class="m-field">
+            <label>Technical Domain / Role Spec Link</label>
+            <textarea id="mRoleDetails" rows="3" placeholder="Paste requirements or architectural challenges..."></textarea>
+          </div>
+          <div class="m-footer">
+            <span class="m-standin">Target: <code>[role-placeholder@domain.com]</code></span>
+            <button class="btn-modal-action" id="btnCopyConsoleRole">Copy Formatted Role Intake →</button>
+          </div>
+          <div class="m-copied-alert" id="mRoleAlert">✓ Intake template copied to clipboard!</div>
+        </div>
+
+        <!-- Client Form -->
+        <div class="m-form" id="mFormClient">
+          <p class="m-desc">Format a project commission scoping document for technical builds or architecture audits.</p>
+          <div class="m-field">
+            <label>Client Studio / Company</label>
+            <input type="text" id="mClientOrg" placeholder="e.g. Studio Vertex">
+          </div>
+          <div class="m-field">
+            <label>Engagement Focus</label>
+            <select id="mClientScope">
+              <option>0-to-1 Web Application &amp; Canvas Graphics</option>
+              <option>High-Throughput Distributed Microservices</option>
+              <option>Cross-Platform Design System &amp; Tokens</option>
+              <option>Technical Architecture &amp; Performance Audit</option>
+            </select>
+          </div>
+          <div class="m-field">
+            <label>Scope Deliverables &amp; Constraints</label>
+            <textarea id="mClientDetails" rows="3" placeholder="Describe timeline, technical stack requirements, or deliverables..."></textarea>
+          </div>
+          <div class="m-footer">
+            <span class="m-standin">Target: <code>[commissions-placeholder@domain.com]</code></span>
+            <button class="btn-modal-action client" id="btnCopyConsoleClient">Copy Project Scoping Brief →</button>
+          </div>
+          <div class="m-copied-alert" id="mClientAlert">✓ Scoping brief copied to clipboard!</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <footer class="console-footer">
+    <div class="footer-meta">
+      <span>[Alex Mercer] // Systems Console Spec v1.0</span>
+      <span class="notice">All benchmarks and systems are labeled stand-ins per <code>PRODUCT.md</code>.</span>
+    </div>
+    <div class="footer-links">
+      <a href="../../index.html">Master Prototype Hub ↗</a>
+    </div>
+  </footer>
+
+  <script src="app.js"></script>
+  <script src="../../shared/switcher-badge.js"></script>
+</body>
+</html>
