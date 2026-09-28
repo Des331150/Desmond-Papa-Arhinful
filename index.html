@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Desmond Papa-Arhinful — Backend Engineer (Python · FastAPI · Django)</title>
+  <title>Desmond Papa-Arhinful, Backend Engineer (Python · FastAPI · Django)</title>
   <link rel="stylesheet" href="shared/base.css">
   <link rel="stylesheet" href="style.css">
 </head>
@@ -13,8 +13,8 @@
     <aside class="availability-strip">
       <div class="availability-left">
         <span class="status-pulse-dot"></span>
-        <span class="availability-status">Taking on backend contract work</span>
-        <span class="availability-window">— Available now</span>
+        <span class="availability-status">Available now for backend contract work</span>
+        <span class="availability-window">Remote</span>
       </div>
       <div class="availability-right">
         <span class="tz-pill">Accra, Ghana · GMT (UTC+0)</span>
@@ -25,7 +25,7 @@
     <!-- Top Monograph Header / Masthead -->
     <header class="monograph-masthead">
       <div class="masthead-top">
-        <div class="folio-edition">Backend Engineering — Python, Go &amp; TypeScript</div>
+        <div class="folio-edition">Backend Engineering in Python, Go &amp; TypeScript</div>
         <div class="folio-direct-contact">
           <span class="direct-email-label">Direct:</span>
           <button class="btn-quick-copy" id="btnQuickCopyEmail" title="Click to copy email address">
@@ -38,7 +38,7 @@
       <div class="masthead-main">
         <div class="author-block">
           <h1 class="author-name">Desmond Papa-Arhinful</h1>
-          <p class="author-title">Backend Engineer — Python, FastAPI, Django</p>
+          <p class="author-title">Backend Engineer in Python, FastAPI, Django</p>
         </div>
         <nav class="monograph-nav" aria-label="Main Navigation">
           <a href="#services" class="nav-item">Services &amp; Scopes</a>
@@ -131,7 +131,7 @@
           <div class="service-number">02</div>
           <h3 class="service-name">Django &amp; DRF Backends</h3>
           <p class="service-desc">
-            Relational domains modelled properly in Django and exposed as a clean REST API — filtering, pagination, and the unglamorous file-handling work that breaks if nobody tests it.
+            Relational domains modelled properly in Django and exposed as a clean REST API. That covers filtering, pagination, and file handling, which breaks if nobody tests it.
           </p>
           <ul class="service-deliverables">
             <li>Django models, migrations, admin</li>
@@ -163,7 +163,7 @@
           <div class="service-number">04</div>
           <h3 class="service-name">Document &amp; Data Pipelines</h3>
           <p class="service-desc">
-            Extracting and transforming documents — PDF and PowerPoint in, structured text and summaries out, with declared limits instead of silent truncation.
+            Extracting and transforming documents. PDF and PowerPoint go in, structured text and summaries come out, and the limits are declared rather than silent.
           </p>
           <ul class="service-deliverables">
             <li>PDF / PPTX text extraction</li>
@@ -182,7 +182,7 @@
     <section id="selected-works" class="works-collection" aria-label="Selected projects">
       <div class="section-title-bar">
         <h2 class="section-title">Selected Projects</h2>
-        <span class="section-meta">3 Builds — One Deployed</span>
+        <span class="section-meta">3 builds, 1 deployed</span>
       </div>
 
       <article class="work-spread" id="spread-01">
@@ -222,13 +222,13 @@
         <div class="spread-body">
           <h3 class="spread-title">Lectiq: Lecture Material Into Graded Practice</h3>
           <p class="spread-lead">
-            Students upload a lecture deck or PDF and get practice quizzes generated from their own material — with every question, and every mark, traceable back to the source text.
+            Students upload a lecture deck or PDF and get practice quizzes generated from their own material. Every question, and every mark, traces back to the source text.
           </p>
 
           <div class="spread-prose">
             <h4>The Problem &amp; Constraints</h4>
             <p>
-              Re-reading notes feels productive and measures almost nothing. The tools that do exist — Quizlet, Anki — test recognition, which you can pass by recognising an answer you have seen. Free-response questions actually test understanding, but grading them normally means a fixed answer key, and a fixed answer key cannot know what a student's particular lecture slide actually said.
+              Re-reading notes feels productive and measures almost nothing. The tools that do exist, Quizlet and Anki, test recognition, which you can pass by recognising an answer you have seen. Free-response questions actually test understanding, but grading them normally means a fixed answer key, and a fixed answer key cannot know what a student's particular lecture slide actually said.
             </p>
             <p>
               So the constraint is narrow and strict: any question asked, and any grade given, has to be justifiable against the uploaded document. Nothing from the model's own knowledge of the subject is allowed to leak in.
@@ -236,10 +236,10 @@
 
             <h4>How It Is Built</h4>
             <p>
-              Everything runs inside Next.js API routes — there is no separate Python service and no inference server to operate. Document extraction happens client-side: <code>pdfjs-dist</code> for PDFs, and <code>JSZip</code> for PowerPoint, which is simply a zip archive of slide XML. That means the file is parsed in the browser and only the extracted text is ever sent onward.
+              Everything runs inside Next.js API routes. There is no separate Python service and no inference server to operate. Document extraction happens client-side: <code>pdfjs-dist</code> for PDFs, and <code>JSZip</code> for PowerPoint, which is simply a zip archive of slide XML. That means the file is parsed in the browser and only the extracted text is ever sent onward.
             </p>
             <p>
-              Topic extraction is a map-reduce over the document, chunked at 10,000 characters, capped at 30 chunks and 60 topics, with a 90-second wall-clock budget. The prompt is explicit that each topic must carry the <em>verbatim</em> original wording of the slides it covers, because that preserved text is precisely what grading is later measured against. The reduce pass merges near-duplicate topics and drops front matter — agendas, learning objectives, grading policies, thank-you slides — which is the single most effective way to stop a quiz generator from producing a quiz about the syllabus.
+              Topic extraction is a map-reduce over the document, chunked at 10,000 characters, capped at 30 chunks and 60 topics, with a 90-second wall-clock budget. The prompt is explicit that each topic must carry the <em>verbatim</em> original wording of the slides it covers, because that preserved text is precisely what grading is later measured against. The reduce pass merges near-duplicate topics and drops front matter such as agendas, learning objectives, grading policies and thank-you slides. That is the single most effective way to stop a quiz generator from producing a quiz about the syllabus.
             </p>
             <p>
               Grading splits by question type. Multiple choice is deterministic: the answer either matches what the source says or it does not. Free response is judged by the model against the source, returning a score and short feedback, with context capped at 30,000 characters and the cut marked explicitly in the prompt rather than left silent.
@@ -250,7 +250,7 @@
               Model calls go through OpenRouter with the model selected by environment variable, so the provider is swappable without a code change. Every call runs at temperature 0 for the deterministic paths, retries three times with exponential backoff on 429 and 5xx, and requests <code>response_format: json_object</code> so parsing does not depend on the model remembering to emit valid JSON. Fenced code blocks are stripped before parsing as a second line of defence.
             </p>
             <p>
-              Truncation is a first-class concept rather than an accident. A dedicated limits module carries explicit reason codes — <code>pdf_pages_capped</code>, <code>topics_truncated</code>, <code>deadline_hit</code> — so a short quiz is explainable rather than mysterious. Quota is enforced server-side at ten generated quizzes per user per month, tracked in Postgres by user and month.
+              Truncation is a first-class concept rather than an accident. A dedicated limits module carries explicit reason codes: <code>pdf_pages_capped</code>, <code>topics_truncated</code>, <code>deadline_hit</code>. A short quiz is then explainable rather than mysterious. Quota is enforced server-side at ten generated quizzes per user per month, tracked in Postgres by user and month.
             </p>
 
             <h4>What Actually Ships</h4>
@@ -308,7 +308,7 @@
         <div class="spread-body">
           <h3 class="spread-title">Text Summariser: Scoped PDF Extraction</h3>
           <p class="spread-lead">
-            Upload a PDF, choose how much of it to read, get a summary back as a downloadable file — and have the working directory tidied up afterwards.
+            Upload a PDF, choose how much of it to read, and get a summary back as a downloadable file. The working directory is tidied up afterwards.
           </p>
 
           <div class="spread-prose">
@@ -434,23 +434,23 @@
           <h3 class="domain-title">Backend &amp; APIs</h3>
           <ul class="practice-list">
             <li>
-              <strong>Python</strong> — The language most of this work is written in
+              <strong>Python</strong> The language most of this work is written in
               <span class="ref-group"><a class="ref-link" href="#spread-01">Ref: Lectiq tooling</a><a class="ref-link" href="#spread-02">Ref: Summariser</a><a class="ref-link" href="#spread-03">Ref: Gohanbako</a></span>
             </li>
             <li>
-              <strong>FastAPI</strong> — Async services, validation, OpenAPI
+              <strong>FastAPI</strong> Async services, validation, OpenAPI
               <a class="ref-link" href="#spread-02">Ref: Summariser</a>
             </li>
             <li>
-              <strong>Django &amp; DRF</strong> — Models, migrations, serializers, auth
+              <strong>Django &amp; DRF</strong> Models, migrations, serializers, auth
               <a class="ref-link" href="#spread-03">Ref: Gohanbako</a>
             </li>
             <li>
-              <strong>REST Design</strong> — Pagination, filtering, token auth
+              <strong>REST Design</strong> Pagination, filtering, token auth
               <a class="ref-link" href="#spread-03">Ref: Gohanbako</a>
             </li>
             <li>
-              <strong>PostgreSQL</strong> — Schema design, migrations, query modelling
+              <strong>PostgreSQL</strong> Schema design, migrations, query modelling
               <a class="ref-link" href="#spread-01">Ref: Lectiq</a>
             </li>
           </ul>
@@ -459,23 +459,23 @@
           <h3 class="domain-title">AI &amp; Data Pipelines</h3>
           <ul class="practice-list">
             <li>
-              <strong>LLM Orchestration</strong> — Structured output, retries, budgets
+              <strong>LLM Orchestration</strong> Structured output, retries, budgets
               <a class="ref-link" href="#spread-01">Ref: Lectiq</a>
             </li>
             <li>
-              <strong>Prompt Contracts</strong> — JSON schemas the model has to satisfy
+              <strong>Prompt Contracts</strong> JSON schemas the model has to satisfy
               <a class="ref-link" href="#spread-01">Ref: Lectiq</a>
             </li>
             <li>
-              <strong>Grading &amp; Extraction</strong> — Judging output against source text
+              <strong>Grading &amp; Extraction</strong> Judging output against source text
               <a class="ref-link" href="#spread-01">Ref: Lectiq</a>
             </li>
             <li>
-              <strong>Hugging Face Transformers</strong> — Local summarisation pipelines
+              <strong>Hugging Face Transformers</strong> Local summarisation pipelines
               <a class="ref-link" href="#spread-02">Ref: Summariser</a>
             </li>
             <li>
-              <strong>Document Parsing</strong> — PDF via PyMuPDF, PPTX via JSZip
+              <strong>Document Parsing</strong> PDF via PyMuPDF, PPTX via JSZip
               <span class="ref-group"><a class="ref-link" href="#spread-01">Ref: Lectiq</a><a class="ref-link" href="#spread-02">Ref: Summariser</a></span>
             </li>
           </ul>
@@ -484,23 +484,23 @@
           <h3 class="domain-title">Frontend &amp; Platform</h3>
           <ul class="practice-list">
             <li>
-              <strong>TypeScript</strong> — End to end, not just the API layer
+              <strong>TypeScript</strong> End to end, not just the API layer
               <a class="ref-link" href="#spread-01">Ref: Lectiq</a>
             </li>
             <li>
-              <strong>Next.js App Router</strong> — Server components and route handlers
+              <strong>Next.js App Router</strong> Server components and route handlers
               <a class="ref-link" href="#spread-01">Ref: Lectiq</a>
             </li>
             <li>
-              <strong>React 19 &amp; Tailwind</strong> — Interface work, not just plumbing
+              <strong>React 19 &amp; Tailwind</strong> Interface work, not just plumbing
               <a class="ref-link" href="#spread-01">Ref: Lectiq</a>
             </li>
             <li>
-              <strong>Supabase</strong> — Auth, sessions and Postgres
+              <strong>Supabase</strong> Auth, sessions and Postgres
               <a class="ref-link" href="#spread-01">Ref: Lectiq</a>
             </li>
             <li>
-              <strong>Vercel</strong> — Deployment and edge runtime
+              <strong>Vercel</strong> Deployment and edge runtime
               <a class="ref-link" href="#spread-01">Ref: Lectiq</a>
             </li>
           </ul>
@@ -513,7 +513,7 @@
       <div class="engagement-intro">
         <h2 class="engagement-title">Start a Conversation</h2>
         <p class="engagement-lead">
-          I take on a small number of backend contracts at a time — API builds, Django or FastAPI work, and AI features that need to be more than a demo. Reach out through whichever channel suits you.
+          I take on a small number of backend contracts at a time: API builds, Django or FastAPI work, and AI features that need to be more than a demo. Reach out through whichever channel suits you.
         </p>
       </div>
 
@@ -648,7 +648,7 @@
     <!-- Editorial Colophon -->
     <footer class="monograph-colophon">
       <div class="colophon-left">
-        <strong>Desmond Papa-Arhinful — Backend Engineering</strong>
+        <strong>Backend engineering by Desmond Papa-Arhinful</strong>
         <p>Backend engineering with FastAPI, Django and Python. Set in Newsreader Serif and system sans. Printed on digital parchment.</p>
         <p class="colophon-disclaimer">The three projects above are my own work, built outside of client engagements. Source is linked for each.</p>
       </div>
